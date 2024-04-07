@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8">
+        <title>Het aanmaken van een formulier met verzendmethode POST</title>
+        <link rel="stylesheet" href="css/stijlen.css">
+    </head>
+    <body>
+        <form method="post">
+            <p>
+                <label>Voornaam:
+                    <input name="Voornaam" type="text" required>
+                </label>
+                
+            </p>
+
+            <p>
+                <label>Tussenvoegesels:
+                    <input name="Tussenvoegsels" type="text">
+                </label>
+            </p>
+
+            <p>
+                <label>Achternaam:
+                    <input name="Achternaam" type="text" required>
+                </label>
+            </p>
+
+                <fieldset class="radio">
+                    <legend>Bent u man of vrouw?</legend>
+                    <p> <label> <input type="radio" name="geslacht" value="M" required>Man</label></p>
+                    <p> <label> <input type="radio" name="geslacht" value="V">Vrouw</label></p>
+                </fieldset>
+            
+            <p>
+                <label for="keuze">Welke module wilt u graag volgen?
+                <select id="keuze" name="keuze">
+                    <optgroup label="Vakgebied Hobby:">
+                        <option value="Filosofie">Filosofie</option>
+                        <option value="Voetverzorging">Voetverzorging</option>
+                        <option value="Beleggen">Beleggen voor beginners</option>
+                    </optgroup>
+                    <optgroup label="Vakgebied Talen:">
+                        <option value="Spaans">Spaans voor beginners</option>
+                        <option value="Engels">Engels voor gevorderden</option>
+                    </optgroup>
+                </select>
+            </label>
+            </p>
+
+            <p>
+                <label>Emailadres:
+                    <input name="Emailadres" type="email"
+                    pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required> <!--oefenen@oefenen.com-->
+                </label>
+            </p>
+
+            <p>
+                <label>Wachtwoord:
+                    <input name="Wachtwoord" type="password" required>
+                </label>
+            </p>
+
+            <input type="submit" value="Verzenden">
+
+        </form>
+    </body>
+</html>
