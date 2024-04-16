@@ -15,3 +15,27 @@ black chess knight      &#9822;
 black chess pawn        &#9823;
 
 */
+
+.content-container {
+
+    box-sizing: content-box;
+
+   inline-size: 400px;
+
+    border: 2px solid blue;
+
+    padding-inline: 1em;
+
+}
+
+.border-container {
+
+    box-sizing: border-box;
+
+    inline-size: 400px;
+
+    border: 2px solid red;
+
+    padding-inline: 1em;
+
+}
