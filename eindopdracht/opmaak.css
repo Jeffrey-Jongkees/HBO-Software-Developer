@@ -1,16 +1,90 @@
 header {
-    background-image: url(./afbeeldingen/header.jpg);
-    background-size: 100% 100%;
-    padding: 300px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Voegt wat padding toe voor een betere uitlijning en uiterlijk */
+}
+
+.header-image image{
+    width: 100%; /* Laat de afbeelding zich aanpassen aan de breedte van zijn container */
+    height: auto; /* Behoudt de aspectratio van de afbeelding */
+    border-radius: 20%;
+}
+
+
+
+
+footer {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Voegt wat padding toe voor een betere uitlijning en uiterlijk */
+}
+
+/* Geeft alle secties een gelijke flex-basis */
+footer > section, .footer-image {
+    flex: 1; /* Geeft elke sectie een gelijk deel van de beschikbare ruimte */
+    padding: 10px; /* Zorgt voor wat binnenruimte binnen elke sectie */
+}
+
+.footer-image img {
+    width: 100%; /* Laat de afbeelding zich aanpassen aan de breedte van zijn container */
+    height: auto; /* Behoudt de aspectratio van de afbeelding */
+    border-radius: 20%;
+}
+
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: pink;
+    color: white;
+  }
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.table-th{
+    background-color:rgb(201, 167, 232);
+}
+
+td {
+    width: 50px;
+    text-align: center;
+    white-space: nowrap;
+
    
 }
 
-nav a {
-    color: black; 
-    text-decoration: none;
-    margin-top: 10px; 
-     
+.td-time-and-classes {
+    background-color: cornsilk;
 }
-nav a:hover {
-    text-decoration: underline; 
+
+.rooster-background{
+    background-image:url("./afbeeldingen/a-classes.jpg");
 }

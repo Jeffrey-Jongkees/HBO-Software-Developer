@@ -15,5 +15,46 @@
                 <a href="contactpagina.html">Contact</a>
             </nav>
         </header>
+        <h1 id="contact">Contactpagina</h1>
+
+        <form method="post">
+            <p>
+                <label for="voornaam">Voornaam: <small>(verplicht)</small></label><br>
+                <input name="Voornaam" type="text" id="voornaam" required>
+            </p>
+
+            <p>
+                <label for="tussenvoegsel">Tussenvoegesels:</label><br>
+                <input name="Tussenvoegsels" type="text" id="tussenvoegsel">
+            </p>
+
+            <p>
+                <label for="achternaam">Achternaam: <small>(verplicht)</small></label><br>
+                <input name="Achternaam" type="text" id="achternaam" required>
+            </p>
+
+
+            <p>
+                <label for="emailadres">Emailadres: <small>(verplicht)</small></label><br>
+                <input name="Emailadres" type="email" id="emailadres"
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="mijnemail@me.nl" required>
+            </p>
+
+            <p>
+                <label for="telefoonnummer">Telefoonnummer:</label><br>
+                <input name="Telefoonnummer" type="tel" id="telefoonnummer"
+                pattern="[0-9]{10}" placeholder="0612345678"> 
+            </p>
+
+            <p>
+                <label for="bericht">Uw bericht: <small>(verplicht)</small></label><br>
+                <textarea name="Bericht" type="text" id="bericht"
+                pattern="[0-9]{10}" placeholder="Type hier uw bericht..." rows="4" cols="50">
+                </textarea> 
+            </p>
+
+
+            <input type="submit" value="Verzenden" formaction="https://jkorpela.fi/cgi-bin/echo.cgi.">
+        </form>
     </body>
 </html>
