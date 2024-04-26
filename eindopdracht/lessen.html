@@ -2,19 +2,39 @@
 <html lang="nl">
     <head>
         <meta charset="utf-8">
-        <title>Lessen op maat aangeboden</title>
+        <title>Nummer 1 Bachata Dansschool</title>
         <link rel="stylesheet" href="./opmaak.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="./opmaak.css">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="./opmaak.css">
+        <link href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Lora:ital,wght@0,400..700;1,400..700&family=Moul&family=Quicksand:wght@300..700&display=swap" rel="./opmaak.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+              integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+              crossorigin="anonymous" 
+              referrerpolicy="no-referrer">
     </head>
     <body>
         <header>
+            <div class="container-header-logo-tekst">
+                <a href="index.html"><img class="header-logo" src="./afbeeldingen/logo.jpg" alt="Logo"></a>
+                <div>
+                    <span class="header-logo-tekst"><strong>D A N C I N G</strong></span>
+                </div>
+            </div>
+            <h1>BACHATA DELERIUM</h1>
             <nav>
-                <a href="index.html">Home</a>
-                <a href="lessen.html">Lessen</a>
-                <a href="rooster.html">Rooster</a>
-                <a href="vakantie.html">Vakantie</a>
-                <a href="contactpagina.html">Contact</a>
+                <a href="index.html" data-url="index.html">Home</a>
+                <div class="dropdown header-div1">
+                    <a class="dropbtn">Rooster</a>
+                    <div class="dropdown-content">
+                        <a href="rooster.html" data-url="rooster.html">Rooster Mei</a>
+                        <a href="rooster-vorige-maand.html" data-url="rooster-vorige-maand.html">Rooster April</a>
+                    </div>
+                </div>
+                <a href="lessen.html" data-url="lessen.html">Lessen</a>
+                <a href="vakantie.html" data-url="vakantie.html">Vakantie</a>
+                <a href="contactpagina.html" data-url="contactpagina.html">Contact</a>
             </nav>
-        </header>
+          </header>
 
         <img src="./afbeeldingen/bachata-intensive.jpg" alt="Bachata les"> <img src="./afbeeldingen/Bachata-private-lesson.jpg" alt="Koppel tijdens een priveles">
 
@@ -49,27 +69,80 @@
             <li>10x 1.5 uur - <strong>&euro;810,-</strong></li>         
         </section>
 
-        <aside>
+        <aside class="aside-font">
             <p>"De algemene reguliere lessen zijn heel fijn om te volgen.<br>
                 Uitleg is duidelijk en er is voldoende tijd om vragen te stellen."<br>
                 <span>Jeffrey</span>
             </p>
         </aside>
 
-        <aside>
-            <p>"Ik heb altijd zoveel lol met mijn mede cursisten. 
+        <aside class="aside-font">
+            <p>"Ik heb altijd zoveel lol met mijn mede cursisten.<br> 
                 Heb leuke nieuwe mensen leren kennen om samen Bachata feesten mee te bezoeken."<br>
                 <span>Nienke</span>
             </p>
         </aside>
 
-        <aside>
+        <aside class="aside-font">
             <p>"Wat zijn de priv&#xE9;lessen toch heerlijk.<br>
-                Alle technieken waar ik moeite mee had, zijn detail voor detail uitgelegd.
-                Hierdoor weet ik mooie moves te maken op de dansvloer en indruk op mijn partner"<br>
+                Alle technieken waar ik moeite mee had, zijn detail voor detail uitgelegd.<br>
+                Hierdoor weet ik mooie moves te maken op de dansvloer en indruk op mijn partner."<br>
                 <span>Kevin en Jorinde </span>
             </p>
         </aside>
+
+        <footer>
+            <section class="footer-contact-info">
+                <h3>Contactgegevens</h3>
+                <address>
+                   <p>
+                    <label><strong>Emailadres</strong></label><br>
+                    <a href="mailto:mijnemailadres@me.nl">mijnemailadres@me.nl</a><br>
+                    <label><strong>Telefoonnummer</strong></label><br>
+                    <a href="tel:0612345678">0612345678</a><br>
+                    <label><strong>Whatsapp</strong></label><br>
+                    <a href="tel:0612345678">0612345678</a>
+                </p>
+                <p>
+                    <label><strong>Adres</strong></label><br>
+                    <span>Sonatelaan 103</span><br>
+                    <span>3438TJ Nieuwegein</span><br>
+                    <span>Nederland</span><br>
+                </p>
+                <p>
+                    <label><strong>KvK Nummer</strong></label><br>
+                    <span>0987654321</span>
+                </p>
+                </address>
+            </section>
+
+            <img class="footer-logo" src="./afbeeldingen/logo.jpg" alt="Logo">
+        
+            <section class="footer-social-links">
+                <h3>Social Media Accounts</h3>
+                <div>
+                <span><a href="https://www.facebook.com/bachatapassionDC/" title="Join ons op Facebook"><i class="fa-brands fa-facebook"></i></span></a> 
+                <span><a href="https://www.instagram.com/bachata_passion" title="Join ons op Instagram"><i class="fa-brands fa-instagram"></i></span></a>
+                <span><a href="https://www.youtube.com/c/bachata-passion" title="Volg ons YouTube kanaal"><i class="fa-brands fa-youtube"></i></span></a>
+                </div>
+            </section>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var currentPagePath = window.location.pathname.split('/').pop(); // Haalt de bestandsnaam van de URL
+                var navLinks = document.querySelectorAll('nav a[data-url]'); // Selecteert alle links binnen <nav> die een 'data-url' hebben
+
+                console.log(navLinks);
+            
+                navLinks.forEach(function(link) {
+                    if (link.getAttribute('data-url') === currentPagePath) {
+                        link.classList.add('active-link'); // Voegt de class 'active-link' toe als de URLs overeenkomen
+                        console.log("Active link found:", link);
+                    }
+                });
+            });
+            </script>
         
     </body>
 </html>

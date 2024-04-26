@@ -4,82 +4,102 @@
         <meta charset="utf-8">
         <title>Nummer 1 Bachata Dansschool</title>
         <link rel="stylesheet" href="./opmaak.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="./opmaak.css">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="./opmaak.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+              integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+              crossorigin="anonymous" 
+              referrerpolicy="no-referrer">
     </head>
     <body>
         <header>
-            <div class="header-image">
-                <img src="./afbeeldingen/logo.jpg" alt="Logo">
+            <div class="container-header-logo-tekst">
+                <a href="index.html"><img class="header-logo" src="./afbeeldingen/logo.jpg" alt="Logo"></a>
+                <div>
+                    <span class="header-logo-tekst"><strong>D A N C I N G</strong></span>
+                </div>
             </div>
+            <h1>BACHATA DELERIUM</h1>
             <nav>
-                <a href="index.html">Home</a>
-                <a href="lessen.html">Lessen</a>
-                <a href="rooster.html">Rooster</a>
-                <a href="vakantie.html">Vakantie</a>
-                <a href="contactpagina.html">Contact</a>
+                <a href="index.html" data-url="index.html">Home</a>
+                <div class="dropdown header-div1">
+                    <a class="dropbtn">Rooster</a>
+                    <div class="dropdown-content">
+                        <a href="rooster.html" data-url="rooster.html">Rooster Mei</a>
+                        <a href="rooster-vorige-maand.html" data-url="rooster-vorige-maand.html">Rooster April</a>
+                    </div>
+                </div>
+                <a href="lessen.html" data-url="lessen.html">Lessen</a>
+                <a href="vakantie.html" data-url="vakantie.html">Vakantie</a>
+                <a href="contactpagina.html" data-url="contactpagina.html">Contact</a>
             </nav>
-        </header>
+          </header>
+            
 
         <main>
-
-            <img src="./afbeeldingen/Bachata-Delerium-teachers-team.jpeg" alt="Docententeam van Bachata Delerium">
-            <aside>
-                <h2>BACHATA DELERIUM</h2>
-                <p>Bachata Delerium is niet alleen de grootste Bachata Dansschool van Nederland.<br>
-                Hier moet je zijn om alles over Bachata te leren!<br>
-                Wij bieden workshops, bootcamps, wekelijkse lessen, shows en entertainment in Bachata.
+            <img src="./afbeeldingen/Bachata-Delerium-teachers-team.jpeg" class="dans-image" alt="Docententeam van Bachata Delerium">
+            <div class="home-content">
+                <aside class="home-delerium">
+                    <h2>BACHATA DELERIUM</h2>
+                    <p>Bachata Delerium is niet alleen de grootste Bachata Dansschool van Nederland.<br>
+                    Hier moet je zijn om alles over Bachata te leren!<br>
+                    Wij bieden workshops, bootcamps, wekelijkse lessen, shows en entertainment in Bachata.
                 </aside>
+    
+                <article class="home-vakantie">
+                    <h2>DOMINICAANSE REPUBLIEK VAKANTIE</h2>
+                    <p>Wat hebben we vorig jaar genoten van het eiland, alle activiteiten, dansen en van elkaar. We zijn nu al druk bezig met voorbereidingen voor BD vakantie 2024.<br>
+                        Datum: 07 - 14 Mei 2024<br><br>
+                        
+                        Aanmeldingen zijn nu open voor de reis. En de eerste aanmeldingen zijn al binnen, dus mis het niet en meld je nu alvast aan voor de BD vakantie 2024 naar DUSHI BONEIRU!<br>
+                        
+                        Wie kan er mee?
+                        Iedereen is welkom om mee te gaan. Hou je van Bachata, gezelligheid, Bonaire ontdekken, zon, zee en strand? Dan is dit d&#xE9; vakantie voor jou!<br>
+                        
+                        Reserveer dus snel je kamer, want er is maar beperkt plek. Via de <a href="./contactpagina.html#contact"><em>contactpagina</em></a> kan je je aanmelden voor de reis.</p>
+                </article>
+                <div class="filmpjes-flexbox">
+                    <img src="./afbeeldingen/bachata-outside.jpg" width="225vh" height="150vh" alt="Bachata feest buiten">
+    
+                    <video width="225vh" height="150vh" controls>
+                        <source src="./afbeeldingen/La-Bachata-by-Manuel-Turizo.mp4" type="video/mp4" alt="Stel danst Bachata">
+                    </video>
+        
+                    <img src="./afbeeldingen/bachata-inside.jpg" width="225vh" height="150vh" alt="Bachata feest buiten">
+        
+                    <iframe width="225vh" height="150vh" 
+                    src="https://www.youtube.com/embed/K0v2cqHGJP4?si=q_sholf84S4WOxOQ" 
+                    title="YouTube video player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen
+                    alt="Youtube filmpje">
+                    </iframe>
+        
+                    <img src="./afbeeldingen/bachata-intensive.jpg" width="225vh" height="150vh" alt="Bachata les">
+                </div>
 
-            <article>
-                <h2>DOMINICAANSE REPUBLIEK VAKANTIE</h2>
-                <p>Wat hebben we vorig jaar genoten van het eiland, alle activiteiten, dansen en van elkaar. We zijn nu al druk bezig met voorbereidingen voor BD vakantie 2024.<br>
-                    Datum: 07 - 14 Mei 2024<br><br>
-                    
-                    Aanmeldingen zijn nu open voor de reis. En de eerste aanmeldingen zijn al binnen, dus mis het niet en meld je nu alvast aan voor de BD vakantie 2024 naar DUSHI BONEIRU!<br>
-                    
-                    Wie kan er mee?
-                    Iedereen is welkom om mee te gaan. Hou je van Bachata, gezelligheid, Bonaire ontdekken, zon, zee en strand? Dan is dit dé vakantie voor jou!<br>
-                    
-                    Reserveer dus snel je kamer, want er is maar beperkt plek. Via de <a href="./contactpagina.html#contact">contactpagina</a> kan je je aanmelden voor de reis</p>
-            </article>
-
-            <img src="./afbeeldingen/bachata-outside.jpg" width="300" height="200" alt="Bachata feest buiten">
-
-            <video width="300" height="200" controls>
-                <source src="./afbeeldingen/La-Bachata-by-Manuel-Turizo.mp4" type="video/mp4" alt="Stel danst Bachata">
-            </video>
-
-            <img src="./afbeeldingen/bachata-inside.jpg" width="300" height="200" alt="Bachata feest buiten">
-
-            <iframe width="300" height="200" 
-            src="https://www.youtube.com/embed/K0v2cqHGJP4?si=q_sholf84S4WOxOQ" 
-            title="YouTube video player" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen
-            alt="Youtube filmpje">
-            </iframe>
-
-            <img src="./afbeeldingen/bachata-intensive.jpg" width="300" height="200" alt="Bachata les">
-
-            <figure>
-                <img src="./afbeeldingen/ladies-team.jpg" width="300" height="200 alt="Bachata Delerium ladies team">
-                <figcaption>Join onze Ladies show team. Nu 3 plekken open</figcaption>
-            </figure>
-
-            <figure>
-                <img src="./afbeeldingen/bachatamania.jpg" width="300" height="200" alt="Feest Bachata Mania">
-                <figcaption>Volgende editie zijn wij weer aanwezig bij Bachata Mania voor een workshop</figcaption>
-            </figure>
-
-            <figure>
-                <img src="./afbeeldingen/men-styling.png" width="300" height="200" alt="Dans styling voor mannen">
-                <figcaption>Voor de mannen die hun dans extra spice willen geven. Komen wij met speciale men styling lessen</figcaption>
-            </figure>
-
+                <div class="plaatjes-flexbox">
+                    <figure class="achtergrondkleur-plaatjes">
+                        <img src="./afbeeldingen/ladies-team.jpg" width="300" height="200 alt="Bachata Delerium ladies team">
+                        <figcaption>Join onze Ladies show team. Nu 3 plekken open</figcaption>
+                    </figure>
+        
+                    <figure class="achtergrondkleur-plaatjes">
+                        <img src="./afbeeldingen/bachatamania.jpg" width="300" height="200" alt="Feest Bachata Mania">
+                        <figcaption>Volgende editie zijn wij weer aanwezig bij Bachata Mania voor een workshop</figcaption>
+                    </figure>
+        
+                    <figure class="achtergrondkleur-plaatjes">
+                        <img src="./afbeeldingen/men-styling.png" width="300" height="200" alt="Dans styling voor mannen">
+                        <figcaption>Voor de mannen die hun dans extra spice willen geven. Komen wij met speciale men styling lessen</figcaption>
+                    </figure>
+                </div>
+            </div>
         </main>
 
         <footer>
-            <section>
+            <section class="footer-contact-info">
                 <h3>Contactgegevens</h3>
                 <address>
                    <p>
@@ -102,25 +122,34 @@
                 </p>
                 </address>
             </section>
+
+            <img class="footer-logo" src="./afbeeldingen/logo.jpg" alt="Logo">
         
-            <div class="footer-image">
-                <img src="./afbeeldingen/logo.jpg" alt="Logo">
-            </div>
-        
-            <section class="footer-social-media">
-                <h3>Social media</h3>
-                <p>
-                    <label><strong>Facebook</strong></label><br>
-                    <a href="https://www.facebook.com/bachatapassionDENHAAG" class="fa-facebook">Facebook</a><br><!-- lukt niet om ronde icoontjes te maken https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_social_media_buttons2 -->
-                    <label><strong>Instagram</strong></label><br>
-                    <a href="https://www.instagram.com/bachatapassion_nl/" class="fa-instagram">Instagram</a><br>
-                    <label><strong>Youtube</strong></label><br>
-                    <a href="https://www.youtube.com/@Bachata-Passion" class="fa-youtube">Youtube</a><br>
-                </p>
+            <section class="footer-social-links">
+                <h3>Social Media Accounts</h3>
+                <div>
+                <span><a href="https://www.facebook.com/bachatapassionDC/" title="Join ons op Facebook"><i class="fa-brands fa-facebook"></i></span></a> 
+                <span><a href="https://www.instagram.com/bachata_passion" title="Join ons op Instagram"><i class="fa-brands fa-instagram"></i></span></a>
+                <span><a href="https://www.youtube.com/c/bachata-passion" title="Volg ons YouTube kanaal"><i class="fa-brands fa-youtube"></i></span></a>
+                </div>
             </section>
         </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var currentPagePath = window.location.pathname.split('/').pop(); // Haalt de bestandsnaam van de URL
+                var navLinks = document.querySelectorAll('nav a[data-url]'); // Selecteert alle links binnen <nav> die een 'data-url' hebben
+
+                console.log(navLinks);
+            
+                navLinks.forEach(function(link) {
+                    if (link.getAttribute('data-url') === currentPagePath) {
+                        link.classList.add('active-link'); // Voegt de class 'active-link' toe als de URLs overeenkomen
+                        console.log("Active link found:", link);
+                    }
+                });
+            });
+            </script>
         
     </body>
 </html>
-
-<!-- lukt niet om ronde icoontjes te maken -->

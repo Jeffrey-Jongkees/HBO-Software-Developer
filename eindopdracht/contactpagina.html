@@ -2,22 +2,43 @@
 <html lang="nl">
     <head>
         <meta charset="utf-8">
-        <title>Contactpagina</title>
+        <title>Nummer 1 Bachata Dansschool</title>
         <link rel="stylesheet" href="./opmaak.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="./opmaak.css">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="./opmaak.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+              integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+              crossorigin="anonymous" 
+              referrerpolicy="no-referrer">
     </head>
-    <body>
-        <header>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="lessen.html">Lessen</a>
-                <a href="rooster.html">Rooster</a>
-                <a href="vakantie.html">Vakantie</a>
-                <a href="contactpagina.html">Contact</a>
-            </nav>
-        </header>
-        <h1 id="contact">Contactpagina</h1>
 
-        <form method="post">
+    <body class="contactpagina-body">
+        <header>
+            <div class="container-header-logo-tekst">
+                <a href="index.html"><img class="header-logo" src="./afbeeldingen/logo.jpg" alt="Logo"></a>
+                <div>
+                    <span class="header-logo-tekst"><strong>D A N C I N G</strong></span>
+                </div>
+            </div>
+            <h1>BACHATA DELERIUM</h1>
+            <nav>
+                <a href="index.html" data-url="index.html">Home</a>
+                <div class="dropdown header-div1">
+                    <a class="dropbtn">Rooster</a>
+                    <div class="dropdown-content">
+                        <a href="rooster.html" data-url="rooster.html">Rooster Mei</a>
+                        <a href="rooster-vorige-maand.html" data-url="rooster-vorige-maand.html">Rooster April</a>
+                    </div>
+                </div>
+                <a href="lessen.html" data-url="lessen.html">Lessen</a>
+                <a href="vakantie.html" data-url="vakantie.html">Vakantie</a>
+                <a href="contactpagina.html" data-url="contactpagina.html">Contact</a>
+            </nav>
+          </header>
+        <h1 id="contact" class="h1-element">Contactpagina</h1>
+
+        <div class="form-container">
+            <form method="post">
             <p>
                 <label for="voornaam">Voornaam: <small>(verplicht)</small></label><br>
                 <input name="Voornaam" type="text" id="voornaam" required>
@@ -28,33 +49,88 @@
                 <input name="Tussenvoegsels" type="text" id="tussenvoegsel">
             </p>
 
-            <p>
+                <p>
                 <label for="achternaam">Achternaam: <small>(verplicht)</small></label><br>
                 <input name="Achternaam" type="text" id="achternaam" required>
-            </p>
+             </p>
 
 
-            <p>
+                <p>
                 <label for="emailadres">Emailadres: <small>(verplicht)</small></label><br>
                 <input name="Emailadres" type="email" id="emailadres"
                 pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="mijnemail@me.nl" required>
-            </p>
+                </p>
 
-            <p>
+                <p>
                 <label for="telefoonnummer">Telefoonnummer:</label><br>
                 <input name="Telefoonnummer" type="tel" id="telefoonnummer"
                 pattern="[0-9]{10}" placeholder="0612345678"> 
-            </p>
+                </p>
 
-            <p>
+                <p>
                 <label for="bericht">Uw bericht: <small>(verplicht)</small></label><br>
                 <textarea name="Bericht" type="text" id="bericht"
                 pattern="[0-9]{10}" placeholder="Type hier uw bericht..." rows="4" cols="50">
                 </textarea> 
-            </p>
+                </p>
 
 
-            <input type="submit" value="Verzenden" formaction="https://jkorpela.fi/cgi-bin/echo.cgi.">
-        </form>
+                <input type="submit" value="Verzenden" formaction="https://jkorpela.fi/cgi-bin/echo.cgi.">
+            </form>
+        </div>
+
+        <footer>
+            <section class="footer-contact-info">
+                <h3>Contactgegevens</h3>
+                <address>
+                   <p>
+                    <label><strong>Emailadres</strong></label><br>
+                    <a href="mailto:mijnemailadres@me.nl">mijnemailadres@me.nl</a><br>
+                    <label><strong>Telefoonnummer</strong></label><br>
+                    <a href="tel:0612345678">0612345678</a><br>
+                    <label><strong>Whatsapp</strong></label><br>
+                    <a href="tel:0612345678">0612345678</a>
+                </p>
+                <p>
+                    <label><strong>Adres</strong></label><br>
+                    <span>Sonatelaan 103</span><br>
+                    <span>3438TJ Nieuwegein</span><br>
+                    <span>Nederland</span><br>
+                </p>
+                <p>
+                    <label><strong>KvK Nummer</strong></label><br>
+                    <span>0987654321</span>
+                </p>
+                </address>
+            </section>
+
+            <img class="footer-logo" src="./afbeeldingen/logo.jpg" alt="Logo">
+        
+            <section class="footer-social-links">
+                <h3>Social Media Accounts</h3>
+                <div>
+                <span><a href="https://www.facebook.com/bachatapassionDC/" title="Join ons op Facebook"><i class="fa-brands fa-facebook"></i></span></a> 
+                <span><a href="https://www.instagram.com/bachata_passion" title="Join ons op Instagram"><i class="fa-brands fa-instagram"></i></span></a>
+                <span><a href="https://www.youtube.com/c/bachata-passion" title="Volg ons YouTube kanaal"><i class="fa-brands fa-youtube"></i></span></a>
+                </div>
+            </section>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var currentPagePath = window.location.pathname.split('/').pop(); // Haalt de bestandsnaam van de URL
+                var navLinks = document.querySelectorAll('nav a[data-url]'); // Selecteert alle links binnen <nav> die een 'data-url' hebben
+
+                console.log(navLinks);
+            
+                navLinks.forEach(function(link) {
+                    if (link.getAttribute('data-url') === currentPagePath) {
+                        link.classList.add('active-link'); // Voegt de class 'active-link' toe als de URLs overeenkomen
+                        console.log("Active link found:", link);
+                    }
+                });
+            });
+            </script>
+
     </body>
 </html>
