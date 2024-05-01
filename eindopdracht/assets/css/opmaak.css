@@ -9,7 +9,7 @@ header, footer {
   font-family: var(--header-footer-font);
 }
 
-body {
+html, body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -151,21 +151,19 @@ nav {
 .rooster-content {
   display: inline-grid;
   width: 100%;
-  height: 200vh;
+  height: 100vh;
   grid-template-columns: [col-1] auto [col-2] auto [col-3] auto [col-4] auto [col-5] auto [col-6] auto [col-7] auto [col-8] auto [col-9] auto [col-10] auto [end];
-  grid-template-rows: [row-1] 20% [row-2] 20% [row-3] 20% [row-4] 20% [row-5];
+  grid-template-rows: [row-1] auto [row-2] auto [row-3] auto [row-4] auto [row-5];
 }
 
 .main-rooster {
   grid-column-start: col-1;
   grid-column-end: end;
   grid-row-start: row-1;
-  grid-row-end: row-4;
+  grid-row-end: row-5;
   margin: 0%;
   padding: 0%;
   }
-
-
 
 table {
   width: 100%;
@@ -187,7 +185,8 @@ td {
 }
 
 .rooster-background {
-  background-image: url("./afbeeldingen/a-classes.jpg");
+  background-image: url("../afbeeldingen/a-classes.jpg");
+  height: 100%;
 }
 
 .dans-image {
@@ -204,48 +203,18 @@ td {
 
 /*Vakantie pagina*/
 
-.opmaak-container{
+.opmaak-container-grid{
   display: inline-grid;
   width: 50%;
   height: 50%;
   grid-template-columns: [col-1] auto [col-2] auto [col-3] auto [col-4] auto [col-5] auto [col-6] auto [col-7] auto [col-8] auto [col-9] auto [col-10] auto [end];
-  grid-template-rows: [row-1] 50% [row-2] 100% [row-3];
+  grid-template-rows: [row-1] 100% [row-2] 100% [row-3];
   flex-direction: column;
 }
 
-.containter-img1{
-  grid-column-start: col-2;
-  grid-column-end: col-5;
-  grid-row-start: row-1;
-  grid-row-end: row-2;
-  height: 50%;
-  width: auto;
-  align-self: center;
-  display: flex;
-  width: 100%;
-  height: auto;
-}
-
-.containter-p{
-  grid-column-start: col-3;
-  grid-column-end: col-8;
-  grid-row-start: row-2;
-  grid-row-end: row-2;
-  height: 90%;
-  width: auto;
-  align-self: center;
-  display: flex;
-}
-
-.containter-img2{
-  grid-column-start: col-3;
-  grid-column-end: col-8;
-  grid-row-start: row-3;
-  grid-row-end: row-3;
-  height: 90%;
-  width: auto;
-  align-self: center;
-  display: flex;
+.link-hotel {
+    text-decoration: underline !important; 
+    color: #0e98c2 !important;
 }
   
 /*Contact pagina*/
@@ -258,21 +227,20 @@ td {
   background-image: linear-gradient(rgb(62, 228, 228), white, rgb(62, 228, 228), grey,rgb(62, 228, 228));
 }
 
-
-form {
-  grid-column-start: col-1;
-  grid-column-end: col-1;
-  grid-row-start: row-1;
-  grid-row-end: row-2;
-}
-
 .form-container {
   display: grid;
   grid-template-columns: [col-1] auto [col-2] auto [end];
   grid-template-rows: [row-1] 100% [row-2];
   justify-content: center;
   align-items: center;
-  min-height: 60vh; 
+  height: 75vh; 
+}
+
+form {
+  grid-column-start: col-1;
+  grid-column-end: col-1;
+  grid-row-start: row-1;
+  grid-row-end: row-2;
 }
 
 
@@ -283,7 +251,7 @@ footer {
   background-color: white;
   display: inline-grid;
   width: 100%;
-  height: 45vh;
+  height: 47vh;
   grid-template-columns: [col-1] auto [col-2] auto [col-3] auto [col-4] auto [col-5] auto [col-6] auto [col-7] auto [col-8] auto [col-9] auto [col-10] auto [end];
   grid-template-rows: [row-1] 100% [row-2];
   justify-content: space-between;
@@ -437,4 +405,16 @@ a:hover {
   color: linear-gradient(45deg, #1cebd9, #0f7a81, #0e98c2);
 }
 
+#mediavoorbeeld{
+  display: block;
+}
 
+/* Voorbeeld om dmv een media query, je scherm responsive te maken */
+@media (max-width: 640px) 
+{
+  /* Door de # geef je een id aan, je refereert dus naar een html object met een bepaald ID */
+   #mediavoorbeeld
+   {
+      display: none;
+   }
+}
