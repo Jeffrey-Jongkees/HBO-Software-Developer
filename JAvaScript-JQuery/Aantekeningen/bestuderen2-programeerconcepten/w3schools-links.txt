@@ -1,0 +1,9 @@
+Bestudeer van W3S JavaScript Objects:
+
+Object Definitions
+
+Object Properties
+
+Object Methods
+
+Object Display.

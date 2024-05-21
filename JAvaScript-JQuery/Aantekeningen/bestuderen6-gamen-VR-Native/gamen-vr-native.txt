@@ -1,0 +1,35 @@
+GAMEN
+
+- Flash was voorhen de meest gebruikte technologie voor het ontwikkelen van games op internet
+- OmdatFlash veel mobiele apparaten niet ondersteund, heeft JS zijn plaats ingegnomen als de enige technologie
+- JavaScript verkleint de grootte van de code die moet worden geschreven en zorgt voor betere spelprestaties
+- In de loop van de tijd zijn veel JavaScript-bibliotheken en op JavaScript gebaseerde engines ontwikkeld die het maken van games mogelijk maken zoals:
+    Phaser.js, 
+    melon-js en visual-js.
+    
+Sommige JavaScript-frameworks ondersteunen 2D- of 3D-gaming, terwijl andere beide ondersteunen. 
+Enkele populaire 3D-gaming frameworks zijn:
+    Babylon.js
+    Three.js 
+    PlayCanvas.js.
+
+VR 
+
+JavaScript verkleint de grootte van de code die moet worden geschreven en zorgt voor betere spelprestaties. 
+In de loop van de tijd zijn veel JavaScript-bibliotheken en op JavaScript gebaseerde engines ontwikkeld die het maken van games mogelijk maken zoals:
+    Phaser.js
+    melon-js
+    visual-js
+
+
+Sommige JavaScript-frameworks ondersteunen 2D- of 3D-gaming, terwijl andere beide ondersteunen. 
+Enkele populaire 3D-gaming frameworks zijn:
+    Babylon.js
+    Three.js
+    PlayCanvas.js
+
+
+NATIVE ONTWIKKELING
+
+Mobiele apps kunnen gebouw worden met React Native. Gebruikt de fundamentelebouwstenen van React voor de native omgeveing van de app.
+Worden gebruikt op platforms als Android en iOS
