@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<style>
+		body {
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 24px;
+		}
+		#divResult {
+			background-color: #ffc;
+			width: 300px;
+			height: 100px;
+			border: 1px solid #333;
+			border-radius: 4px;
+		}
+		#divMouseover {
+			background-color: #CCFF66;
+			width: 400px;
+			height: 400px;
+			border: 1px solid #333;
+			border-radius: 4px;
+		}
+	</style>
+	<title>jQuery - oefening 11.2</title>
+</head>
+
+<body>
+	<!-- HTML -->
+	<div id="divMouseover"></div>
+	<div id="divResult"></div>
+
+	<!-- JavaScript -->
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#divMouseover').on('mousemove', function (e) {
+				const posX = e.pageX;
+				const posY = e.pageY;
+				$('#divResult').html('positie X:' + posX + '<br />positie Y: ' + posY);
+			});
+		});
+	</script>
+</body>
+</html>
+
+

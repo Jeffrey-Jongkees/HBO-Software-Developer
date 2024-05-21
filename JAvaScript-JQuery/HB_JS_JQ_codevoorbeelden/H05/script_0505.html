@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Eenvoudige arrays</title>
+</head>
+
+<body>
+	<h1>Kennismaken met arrays</h1>
+	<p>Kijk in de DevTools console (F12) voor uitvoer.</p>
+	<div id="divResult"></div>
+
+	<script>
+		// 1. Enkele voorbeelden van arrays
+		const leeg = []; // een lege array
+		const tientallen = [10, 20, 30, 40, 50]; // Array met vijf numerieke waarden.
+		const diversen = ['Hello', 'World', 10, 20, true]; // Array met diverse waarden.
+		const legeArray = new Array(); // nieuwe, lege array. Deze syntax wordt bijna nooit gebruikt.
+		const tellen = [1, , 3]; // array met twee elementen en een leeg element in het midden.
+
+		// 2. Waarden uitlezen en toevoegen
+		const a = tientallen[2]; // a heeft nu de waarde 30.
+		tientallen[5] = 60; // de waarde 60 is als nieuw element toegevoegd aan het einde van de array
+
+		tientallen[0] = 70; // het eerste element heeft nu waarde 70.
+
+		// Lengte van arrays
+		const x = [].length; // x == 0, want een lege array heeft geen elementen.
+		const y = [1, 2, 3].length; // y == 3 (array heeft drie elementen). De hoogste index == 2 (!)
+
+		// Eigenschap .length als toekenning gebruiken
+		const z = ['a', 'b', 'c', 'd']; // z heeft vier elementen
+		z.length = 2; // z is nu ['a', 'b']
+		z.length = 0; // z is nu [] (nul elementen, lege array)
+		z.length = 4; // de lengte is vier, maar de array bevat geen elementen. Dit is hetzelfde als new Array(4)
+
+		// Uitvoer in de console
+		console.log('De array tientallen[] :: ' , tientallen);
+		console.log('De waarde van a :: ', a);
+		console.log('Het vierde element in de array tientallen[] :: ', tientallen[3]);
+	</script>
+</body>
+</html>

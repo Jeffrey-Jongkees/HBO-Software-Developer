@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <title>jQuery tooltips</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            border: 2px solid #777;
+            border-radius: 4px;
+            padding: 2px 6px;
+            background-color: #FFFF99;
+            color: #333;
+        }
+    </style>
+    <!-- jQuery insluiten -->
+    <script src="../script/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#tabs a').hover(
+                function (e) {
+                    // 1. hover in
+                    const titel = $(this).attr('title');
+                    const positie = {
+                        'top': (e.pageY - 10) + 'px',
+                        'left': (e.pageX + 15) + 'px'
+                    };
+                    $('<div class="tooltip"></div>')
+                        .text(titel)
+                        .appendTo('body')
+                        .css(positie)
+                        .fadeIn();
+                },
+                function () {
+                    // 2. hover out
+                    $('.tooltip').remove();
+                }).on('mousemove', function (e) {
+
+                // 3. muis volgen
+                const positie = {
+                    'top': (e.pageY - 10) + 'px',
+                    'left': (e.pageX + 15) + 'px'
+                };
+                $('.tooltip').css(positie);
+            });
+        });
+    </script>
+</head>
+
+<body>
+<ul id="tabs">
+    <li><a href="#" title="Informatie over onze diensten en producten">Informatie</a></li>
+    <li><a href="#" title="Achtergronden bij het bedrijf, de mensen, en meer">Over ons</a></li>
+    <li><a href="#" title="Adresgegevens en een routebeschrijving">Contact</a></li>
+</ul>
+</body>
+</html>
+
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Pagina</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/opmaak.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/map.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="../assets/css/opmaak.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+        rel="../assets/css/opmaak.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="../assets/javascript/maps.js"></script>
+</head>
+
+<body class="contactpagina-body">
+    <header>
+        <div class="container-header-logo-tekst">
+            <a href="../index.html"><img class="header-logo" src="../assets/afbeeldingen/logo.jpg" alt="Logo"></a>
+            <div>
+                <a href="../index.html"><span class="header-logo-tekst"><strong>D A N C I N G</strong></span></a>
+            </div>
+        </div>
+        <h1>BACHATA DELERIUM</h1>
+        <nav>
+            <a href="../index.html" data-url="../index.html">Home</a>
+            <div class="dropdown header-div1">
+                <a class="dropbtn">Rooster</a>
+                <div class="dropdown-content">
+                    <a href="./rooster.html" data-url="./rooster.html">Rooster Mei</a>
+                    <a href="./rooster-vorige-maand.html" data-url="./rooster-vorige-maand.html">Rooster April</a>
+                </div>
+            </div>
+            <a href="./lessen.html" data-url="./lessen.html">Lessen</a>
+            <a href="./vakantie.html" data-url="./vakantie.html">Vakantie</a>
+            <a href="contactpagina.html" data-url="contactpagina.html">Contact</a>
+        </nav>
+    </header>
+    <h1 id="contact" class="h1-element">Contactpagina</h1>
+    <div class="form-container">
+        <form method="post">
+            <p>
+                <label for="voornaam">Voornaam: <small>(verplicht)</small></label><br>
+                <input name="Voornaam" type="text" id="voornaam" required>
+            </p>
+
+            <p>
+                <label for="tussenvoegsel">Tussenvoegesels:</label><br>
+                <input name="Tussenvoegsels" type="text" id="tussenvoegsel">
+            </p>
+
+            <p>
+                <label for="achternaam">Achternaam: <small>(verplicht)</small></label><br>
+                <input name="Achternaam" type="text" id="achternaam" required>
+            </p>
+
+
+            <p>
+                <label for="emailadres">Emailadres: <small>(verplicht)</small></label><br>
+                <input name="Emailadres" type="email" id="emailadres" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                    placeholder="mijnemail@me.nl" required>
+            </p>
+
+            <p>
+                <label for="telefoonnummer">Telefoonnummer:</label><br>
+                <input name="Telefoonnummer" type="tel" id="telefoonnummer" pattern="[0-9]{10}"
+                    placeholder="0612345678">
+            </p>
+
+            <p>
+                <label for="bericht">Uw bericht: <small>(verplicht)</small></label><br>
+                <textarea name="Bericht" id="bericht" placeholder="Type hier uw bericht..." rows="4" cols="50">
+                </textarea>
+            </p>
+
+
+            <input type="submit" value="Verzenden" formaction="https://jkorpela.fi/cgi-bin/echo.cgi">
+        </form>
+    </div>
+    <div id="map"></div>
+
+    <footer>
+        <section class="footer-contact-info">
+            <h3>Contactgegevens</h3>
+            <address>
+                <label><strong>Emailadres</strong></label><br>
+                <a href="mailto:mijnemailadres@me.nl">mijnemailadres@me.nl</a><br>
+                <label><strong>Telefoonnummer</strong></label><br>
+                <a href="tel:0612345678">0612345678</a><br>
+                <label><strong>Whatsapp</strong></label><br>
+                <a href="tel:0612345678">0612345678</a><br><br>
+                <label><strong>Adres</strong></label><br>
+                <span>Sonatelaan 103</span><br>
+                <span>3438TJ Nieuwegein</span><br>
+                <span>Nederland</span><br><br>
+                <label><strong>KvK Nummer</strong></label><br>
+                <span>0987654321</span>
+            </address>
+        </section>
+
+        <img class="footer-logo" src="../assets/afbeeldingen/logo.jpg" alt="Logo">
+
+        <section class="footer-social-links">
+            <h3>Social Media Accounts</h3>
+            <div>
+                <span><a href="https://www.facebook.com/bachatapassionDC/" title="Join ons op Facebook"><i class="fa-brands fa-facebook"></i></a></span> 
+                <span><a href="https://www.instagram.com/bachata_passion" title="Join ons op Instagram"><i class="fa-brands fa-instagram"></i></a></span>
+                <span><a href="https://www.youtube.com/c/bachata-passion" title="Volg ons YouTube kanaal"><i class="fa-brands fa-youtube"></i></a></span>
+            </div>
+        </section>
+    </footer>
+
+    <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
+            ({ key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly" });</script>
+
+    <script src="../assets/javascript/headerActive.js"></script>
+</body>
+</html>

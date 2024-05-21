@@ -1,0 +1,88 @@
+Primitive datatypes: (7)
+
+- string
+- Number
+- Null
+- Undefiend
+- Boolean
+- Symbol -> sinds ES6
+- Object
+
+"An operator applies an operation to a value, which is known as the operand. A
+unary operator only requires one operand;"
+
+typeof 'hello' -> typeof is de operator en de string 'hello' is de operand
+
+"A binary operator requires two operands;"
+
+3 + 5
+
+De + is de operator en de nummers 3 en 5 zijn de operands
+
+VARIABELEN
+
+const -> de value kan niet worden aangepast in het programma later
+behalve als de waarde een Object is non-primitive datatype (object, Array) de data hiervan is mutable
+
+let -> de waarde kan wel worden aangepast later in het programma
+
+meerdere variabelen kunnen op een lijn gedeclareerd worden let x = 3, y = 4, z = 5;
+
+"Variables that start with an underscore generally refer to private properties and
+methods, so it’s best to not follow this convention for your own variable names.
+The $ character is also used by the popular jQuery library, so using this in your
+variable names may also cause problems"
+
+
+SCOPE
+
+let en const gebruiken om variabelen te declareren betekent dat ze block scoped zijn. 
+Hun waarde bestaat alleen in het block waarin zij zijn gedefineerd.
+
+GLOBAL SCOPE
+Elke variabl die buiten een block is gedefineerd heeft een gobale scope en zijn overal in het programma accessible/aanspreekbaar dus ook in blocks!
+
+Probeer zo min mogelijk gobal variabelen te defineeren "any variables that share the
+same name will clash and potentially overwrite each other’s values."
+
+LOCAL SCOPE
+
+Variabelen gedeclareerd met let/const in een block hebben local scope. En zijn niet buiten het block accessible/aanspreekbaar.
+Als variabelen binnen een block gedeclareerd worden zonder let/const dan hebben ze global scope en accessible/aanspreekbaar buiten het block.
+
+STRING PROPERTIES AND METHONDS
+
+name.length; // retrieve the name variable’s length property
+<< 5
+
+name['length']; // note the property name is in quote marks
+<< 5 (alternatieve manier)
+
+"It’s usually more common to use the dot . notation due to it requiring less typing,
+although there are some occasions, which we’ll come across later in the book,
+when the square bracket notation is preferable."
+
+indexOf()
+- retourneert de positie van de eerstvoorkomende geval van een value in een string. Bij een heel woord, wordt de positie van de eerste letter geretourneert
+- retourneert -1 als de value niet gevonden is (niet aanwezig)
+- methode is case sensitive
+
+lastIndexOf()
+- retourneert de positie van de laatstvoorkomende geval van een value in een string. Bij een heel woord, wordt de positie van de eerste letter geretourneert
+- retourneert -1 als de value niet gevonden is (niet aanwezig)
+- doorzoekt de string van het eind to het begin
+- retourneert de index tellend vanaf het begin 0 
+- methode is case sensitive
+
+substring()
+charAt()
+
+
+NUMBERS
+Infinity -> error wanneer een nummer te groot is voor JS
+-Infinity -> error wanneer een nummer te klein is voor JS
+
+NaN -> Not a Number error wanneer je b.v. een string maal een getal wilt doen ('hallo' * 2)
+
+type-coercion -> wanneer de operands van een operator niet van hetzelfde type zijn. JS zal proberen om een van de twee te verwisselen naar
+een equalivant van de andere operand. ('2' * 8)

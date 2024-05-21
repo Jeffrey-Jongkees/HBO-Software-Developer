@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Objecten retourneren</title>
+</head>
+
+<body>
+	<h1>Objecten retourneren</h1>
+	<div id="divResult"></div>
+
+	<script>
+		// variabele
+		var getal = 15;
+
+		// functie
+		function kwadraat(x) {
+			var result = x * x;
+			var status = 'OK';
+
+			// stel een object samen met het berekende resultaat en
+			// een statuscode.
+			return {
+				resultaat: result,
+				statusCode: status
+			};
+		}
+
+		// functieaanroep
+		var result = kwadraat(getal);
+
+		// gebruik de waarden die nu in result zijn opgeslagen
+		document.getElementById('divResult').innerHTML +=
+			'Het kwadraat van ' + getal + ' is ' + result.resultaat + '<br />';
+		document.getElementById('divResult').innerHTML +=
+			'De teruggegeven statuscode is:  ' + result.statusCode;
+
+
+	</script>
+</body>
+</html>

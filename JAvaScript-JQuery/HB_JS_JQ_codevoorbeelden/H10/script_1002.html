@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<style>
+		#divResult {
+			border: 1px solid #999;
+			background-color: #ffc;
+			padding: 4px;
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+	<title>jQuery animations: toggle</title>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// divResult tonen en verbergen na klik op knop
+			$('#btnToggle').on('click', function () {
+				$('#divResult').toggle();
+				// gebruik evt. zelf $('#divResult').toggle('slow'); om het resultaat te zien als een parameter wordt meegegeven.
+			});
+
+
+		});
+
+	</script>
+</head>
+
+<body>
+	<div id="divResult">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid beatae blanditiis consequuntur dignissimos dolores eos harum iste laudantium, magnam minus molestias natus neque quae recusandae repellat voluptatibus. Est, maiores?</div>
+	<button id="btnToggle">Wissel zichtbaarheid</button>
+
+</body>
+</html>
+
+

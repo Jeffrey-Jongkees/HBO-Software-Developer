@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <title>document.createElement()</title>
+    <script>
+        // Voer script uit zodra de pagina helemaal geladen is.
+        window.addEventListener('load', () => {
+            // Maak een element van het type dat in het tekstvak is aangegeven.
+            document.getElementById('btnKnop1').addEventListener('click', () => {
+                const element = document.getElementById('txtElement').value;
+                const newElement = document.createElement(element);
+                newElement.id = 'nieuwElement';
+                console.log(newElement);
+                document.getElementById('divResult').innerHTML =
+                    'Het element ' + newElement + ' is gemaakt';
+            })
+        })
+    </script>
+</head>
+
+<body>
+<h2>document.createElement</h2>
+<p>Typ de naam van een HTML-element</p>
+<input type="text" id="txtElement"/>
+<button id="btnKnop1">Maak</button>
+<p>(Gebruik de Developer Tools om het resultaat te zien)</p>
+<div id="divResult"></div>
+</body>
+</html>

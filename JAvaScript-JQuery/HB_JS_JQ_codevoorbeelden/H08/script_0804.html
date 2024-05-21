@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <title>jQuery basisvoorbeelden</title>
+    <!-- jQuery insluiten -->
+    <script src="../script/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // toon aantal paragrafen
+            const paragrafen = $('p');
+            console.log('aantal paragrafen: ' + paragrafen.length);
+
+            // toon aantal tabelrijen
+            const rijen = $('#myTable tr');
+            console.log('aantal rijen: ' + rijen.length);
+
+            // toon aantal oneven tabelrijen
+            const oneven = $('#myTable tr:odd');
+            console.log('aantal oneven rijen: ' + oneven.length);
+
+            // selecteer alle elementen in de <body>
+            console.log($('body').children());
+
+        });
+    </script>
+</head>
+
+<body>
+<h2>jQuery basisvoorbeelden</h2>
+<p>De eerste paragraaf.</p>
+<p>Nog een paragraaf.</p>
+<div>Tekst in een div.</div>
+<p>Een derde paragraaf.</p>
+<table id="myTable" border="1">
+    <tr>
+        <td>cel 1</td>
+        <td>cel 2</td>
+        <td>cel 3</td>
+    </tr>
+    <tr>
+        <td>cel 4</td>
+        <td>cel 5</td>
+        <td>cel 6</td>
+    </tr>
+    <tr>
+        <td>cel 7</td>
+        <td>cel 8</td>
+        <td>cel 9</td>
+    </tr>
+    <tr>
+        <td>cel 10</td>
+        <td>cel 11</td>
+        <td>cel 12</td>
+    </tr>
+</table>
+<p>Kijk ook in de Developer Console (F12).</p>
+</body>
+</html>

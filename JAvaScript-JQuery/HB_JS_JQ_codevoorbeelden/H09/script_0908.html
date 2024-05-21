@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery CSS- en HTML-functies</title>
+	<!-- CSS -->
+	<style>
+	body{
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:24px;
+	}
+	img{
+		display:block;
+		width: 300px;
+	}
+	</style>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		// HTML-functie .attr() beschrijven voor <img>
+		let i = 1;
+		$('#knop1').on('click', function(){
+			i++; // i ophogen
+
+			// meerdere attributen aanpassen via objectnotatie
+			const imgAttributes = {
+				'src' : '../img/kitten'+ i +'.jpg',
+				'title' : 'Afbeelding van poes ' + i,
+				'alt' : 'Afbeelding van poes ' + i
+			};
+			$('#imgKitten').attr(imgAttributes);
+
+			if(i > 2){
+				i = 0;	// reset i
+			}
+		});
+
+
+	}); // einde document.ready
+	</script>
+</head>
+
+<body>
+	<img src="../img/kitten1.jpg" id="imgKitten" alt="afbeelding kitten" />
+	<button id="knop1">Wissel afbeelding</button>
+
+</body>
+</html>

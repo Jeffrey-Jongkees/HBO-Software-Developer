@@ -1,0 +1,56 @@
+JS kan data op verschillende manieren weergeven:
+
+- in een element -> innerHTML
+
+document.getElementById("element's ID").innerHTML = 
+
+
+- in een output -> document.write()
+
+Nooit document.write() aanroepen waneer de pagina volledig is geladen, de uitkomst overschrijft de gehele content van de pagina. Niet in functies of buttons verwerken!!
+document.write() methode alleen voor testen gebruiken.
+
+
+- in een alert box -> window.alert()
+
+Window keyword mag weggelaten worden. Het window object is een global scope object. Alle variabelen, properties en methodes behoren bij default al tot het window object.
+
+
+- in de browser's console -> console.log()
+
+Handig voor debugging gebruik 
+
+F12 -> console tab
+
+
+- printen
+
+JS heeft geen print object of print methodes. 
+
+"JavaScript does not have any print object or print methods.
+You cannot access output devices from JavaScript.
+The only exception is that you can call the window.print() method in the browser to print the content of the current window."
+
+
+JS heeft 3 verschilloende pop-up boxen:
+
+1. Alert box (zie boven) wordt vaak gebruikt om er zeker van te zijn dat informatie bij de gebruiker komt. De gebruiker moet op OK drukken om verder te gaan.
+
+2. Confirm box, wordt vaak gebruikt om de gebruiker iets te laten accepteren. Er moet op OK of op Cancel geklikt worden.
+    OK -> de box retourneert true
+    Cancel -> de box retourneert false
+
+window.confirm("sometext");
+
+Window keyword mag weggelaten worden.
+
+3. Prompt box, wordt vaak gebruikt om de gebruiker een value in te voeren voor het bezoeken van een pagina.
+    OK -> de box retourneert de ingevoerde value
+    Cancel -> de box retourneert null
+
+window.prompt("sometext","defaultText");
+
+Window keyword mag weggelaten worden.
+
+Line breaks -> \n "alert("Hello\nHow are you?");"
+

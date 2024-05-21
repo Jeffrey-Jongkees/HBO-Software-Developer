@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <title>document.getElementsByName()</title>
+    <script>
+        // Voer script uit zodra de pagina helemaal geladen is.
+        window.addEventListener('load', () => {
+            document.getElementById('btnKnop1').addEventListener('click', () => {
+                const kleuren = document.getElementsByName('radioGroup');
+                let uwKeuze = '';
+                for (let i in kleuren) {
+                    if (kleuren[i].checked) {
+                        uwKeuze = 'Gekozen kleur: ' + kleuren[i].value;
+                    }
+                }
+                document.getElementById('divResult').innerHTML = uwKeuze;
+            })
+        })
+    </script>
+</head>
+
+<body>
+<h2>document.getElementsByName</h2>
+<input type="radio" name="radioGroup" value="rood" checked/>Rood<br/>
+<input type="radio" name="radioGroup" value="blauw"/>Blauw<br/>
+<input type="radio" name="radioGroup" value="geel"/>Geel<br/>
+<input type="radio" name="radioGroup" value="groen"/>Groen<br/>
+<button id="btnKnop1">Welke keuze?</button>
+<div id="divResult"></div>
+</body>
+</html>

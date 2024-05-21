@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Escapetekens</title>
+</head>
+
+<body>
+	<h1>Diverse stringfuncties</h1>
+	<div id="divResult"></div>
+
+	<script>
+		let boodschap = "Hello " + "world"; // boodschap is nu 'Hello world'
+		const lengte = boodschap.length;		// lengte is 11
+		console.log(lengte);		// schrijf waarde naar de console
+
+		//***********************
+		// verschillende stringfuncties
+		//***********************
+		boodschap.charAt(0); // 'h' -  Strings beginnen te tellen bij 0.
+		boodschap.substring(0, 5); // 'Hello' -  De eeerste vijf tekens
+		boodschap.indexOf('w'); // 6 - de positie waarop de letter 'w' voorkomt.
+		boodschap.indexOf('x'); // -1 - de 'x' komt niet voor in de string.
+		boodschap.lastIndexOf('l'); // 9 - de laatste positie waar de letter 'l' voorkomt
+		boodschap.replace('w', 'W'); // 'Hello World'. De 'w' is vervangen door 'W'
+		boodschap.toUpperCase(); // 'HELLO WORLD' - omzetten naar hoofdletters
+		boodschap.toLowerCase(); // 'hello world' - omzetten naar kleine letters.
+
+	</script>
+</body>
+</html>

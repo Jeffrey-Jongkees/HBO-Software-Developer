@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery CSS- en HTML-functies</title>
+	<!-- CSS -->
+	<style>
+		body {
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 24px;
+		}
+
+		.blauw {
+			background-color: #09F;
+			color: #fff;
+			border: 1px solid #000;
+		}
+	</style>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// CSS-klasse toevoegen met .addClass()
+			$('p').addClass('blauw');
+
+			// CSS-klasse verwijderen met .removeClass()
+			$('p:odd').removeClass('blauw');
+		});
+	</script>
+</head>
+
+<body>
+	<p>Dit is de eerste paragraaf</p>
+	<p>Dit is de tweede paragraaf</p>
+	<p>Dit is de derde paragraaf</p>
+	<p>Dit is de vierde paragraaf</p>
+	<p>Dit is de vijfde paragraaf</p>
+	<p>Dit is de zesde paragraaf</p>
+</body>
+</html>

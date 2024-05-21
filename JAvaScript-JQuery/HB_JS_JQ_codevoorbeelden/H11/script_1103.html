@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <style>
+        .normal {
+            width: 100px;
+            border: 1px solid #999;
+            border-radius: 4px;
+            height: 24px;
+            font-size: 20px;
+        }
+
+        .focus {
+            width: 300px;
+            border: 1px solid #222;
+            background-color: #FFFFCC;
+            color: #333;
+            border-radius: 4px;
+            height: 24px;
+            font-size: 20px;
+            /* Nog toevoegen: CSS-transition */
+        }
+    </style>
+    <title>jQuery .focus() en .blur()</title>
+    <!-- jQuery insluiten -->
+    <script src="../script/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // De functies .focus() en .blur()
+            $('#txtNaam')
+                .focus(function () {
+                    $(this)
+                        .removeClass('normal')
+                        .addClass('focus');
+                }).blur(function () {
+                $(this)
+                    .removeClass('focus')
+                    .addClass('normal');
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+<input type="text" id="txtNaam" class="normal"/>
+<p>Klik in- en buiten het vak om de werking van <code>.focus()</code> en <code>.blur()</code> te zien.</p>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery CSS- en HTML-functies</title>
+	<!-- CSS -->
+	<style>
+		body {
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 24px;
+		}
+
+		.blauw {
+			color: #06F;
+		}
+	</style>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		// de functie .is()
+		$(document).ready(function () {
+			// klik op keuzevakjes afvangen
+			$('input[type=checkbox]').on('click', function () {
+				const divResult = $('#divResult'); // caching in variabele.
+
+				// 1. divResult leegmaken en lege array maken
+				divResult.empty();
+				let kleuren = [];
+
+				// 2. Alle geselecteerde checkboxes ophalen en er overheen lopen.
+				$('input[type=checkbox]:checked').each(function () {
+					// 2a. kleurwaarde in de array plaatsen.
+					kleuren.push($(this).val());
+				});
+
+				// 3. Array met kleuren in divResult plaatsen
+				divResult.text('Gekozen: ' + kleuren.join(', ')); // kan ook let kleuren.toString();
+
+			});
+
+		}); // einde document.ready
+	</script>
+</head>
+
+<body>
+	<input type="checkbox" value="geel" />Geel<br />
+	<input type="checkbox" value="rood" />Rood<br />
+	<input type="checkbox" value="blauw" />Blauw<br />
+	<div id="divResult"></div>
+</body>
+</html>
+
+

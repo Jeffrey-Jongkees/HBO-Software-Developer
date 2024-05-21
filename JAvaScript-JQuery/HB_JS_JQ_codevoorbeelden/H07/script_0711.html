@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <title>.replaceChild()</title>
+    <script>
+        // Voer script uit zodra de pagina helemaal geladen is.
+        window.addEventListener('load', () => {
+            document.getElementById('btnKnop1').addEventListener('click', () => {
+                // 1. zoek laatste alinea
+                const divResult = document.getElementById('divResult');
+                const oudeAlinea = divResult.querySelector('p:last-child'); // array-notatie gebruiken om element uit NodeList te halen (ook al zit er maar 1 element in).
+                console.log(oudeAlinea + ' wordt vervangen...');
+
+                // 2. vervang de alinea
+                const nieuweAlinea = document.createElement('p');
+                const nieuweTekst = document.createTextNode('Vervangen...!');
+                nieuweAlinea.appendChild(nieuweTekst);
+                divResult.replaceChild(nieuweAlinea, oudeAlinea);
+                console.log('vervangen!');
+            })
+        })
+    </script>
+</head>
+
+<body>
+<h2>.replaceChild()</h2>
+<p>Vervang de alinea</p>
+<button id="btnKnop1">Verwijder</button>
+<div id="divResult">
+    <p>Alinea 1</p>
+</div>
+</body>
+</html>

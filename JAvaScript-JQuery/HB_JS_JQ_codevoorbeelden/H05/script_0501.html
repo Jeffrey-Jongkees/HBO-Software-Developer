@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Anonieme functie</title>
+</head>
+
+<body>
+	<h1>Anonieme functie</h1>
+	<div id="divResult"></div>
+
+	<script>
+		// 1. Anonieme functie - heeft geen naam en wordt
+		// automatisch uitgevoerd zodra de event 'load' optreed in de browser.
+		window.addEventListener('load', function () {
+			alert('Alles in orde');
+			// ... overige code in de functie
+		});
+
+		// 2. Benoemde functie
+		//window.addEventListener('load', boodschap);
+		//function boodschap() {
+		//	alert('Alles in orde');
+		//	// ... overige code in de functie
+		//}
+
+	</script>
+</body>
+</html>

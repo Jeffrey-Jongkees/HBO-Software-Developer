@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery CSS- en HTML-functies</title>
+	<!-- CSS -->
+	<style>
+		body {
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 24px;
+		}
+
+		.blauw {
+			color: #06F;
+		}
+	</style>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		// de functie .is()
+		$(document).ready(function () {
+			$('#btnKnop1').on('click', function () {
+				let msg = '';
+				if($('#chkVoorwaarden').is(':checked')){
+					msg = 'Bedankt dat u akkoord gaat, u mag verder...';
+					// ... doe andere nuttige dingen
+				} else {
+					msg = 'Om verder te gaan moet u de Algemene voorwaarden accepteren';
+				}
+				$('#divResult').text(msg);
+			});
+		}); // einde document.ready
+	</script>
+</head>
+
+<body>
+	<input type="checkbox" id="chkVoorwaarden" />Ik ga akkoord met de Algemene voorwaarden<br />
+	<button id="btnKnop1">Verder</button>
+	<div id="divResult"></div>
+</body>
+</html>

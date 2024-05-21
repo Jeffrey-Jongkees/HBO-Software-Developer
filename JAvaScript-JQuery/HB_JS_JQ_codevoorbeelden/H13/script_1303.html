@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<style>
+
+	</style>
+	<title>jQuery UI - tabs</title>
+	<!-- stijlen voor jQuery UI -->
+	<link href="../css/jquery-ui.css" rel="stylesheet" />
+	<!-- jQuery & jQuery UI insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script src="../script/jquery-ui.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#tabs').tabs();
+		});
+	</script>
+</head>
+
+<body>
+	<h2>jQuery UI Tabs</h2>
+
+	<div id="tabs">
+		<ul>
+			<li><a href="#info">Informatie</a></li>
+			<li><a href="#over">Over ons</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+		<div id="info">
+			Informatie over de diensten, producten, enzovoort....
+		</div>
+		<div id="over">
+			Achtergrondinformatie over bedrijf, de mensen, enzovoort....
+		</div>
+		<div id="contact">
+			contactgegevens...
+		</div>
+	</div>
+
+</body>
+</html>
+
+

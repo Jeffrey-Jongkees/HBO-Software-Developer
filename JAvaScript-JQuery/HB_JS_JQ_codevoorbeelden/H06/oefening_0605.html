@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>Oefening 6.5</title>
+    <script>
+        window.addEventListener('load', function () {
+            // cache foto in variabele
+            var foto = document.getElementById('foto1');
+            foto.addEventListener('click', function () {
+                // haal de bestandsnaam op via het object attributes[]
+                const bestandsnaam = foto.attributes['src'].value;
+                document.getElementById('divResult').innerHTML = 'Afbeelding: ' + bestandsnaam;
+            });
+        });
+    </script>
+</head>
+
+<body>
+<h2>Klik op de afbeelding</h2>
+<img src="kitten_01.jpg" alt="foto" id="foto1" width="300"/><br/>
+<div id="divResult"></div>
+
+</body>
+</html>

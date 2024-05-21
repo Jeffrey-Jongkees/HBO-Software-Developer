@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Het statement switch()</title>
+</head>
+
+<body>
+	<h1>Het statement switch()</h1>
+	<div id="divResult"></div>
+
+	<script>
+		// stel dat de variabele kleur elders in het script de waarde "blauw" heeft gekregen
+		const kleur = 'blauw';
+		switch (kleur) {
+			case 'rood': {	// start hier als kleur === 'rood'
+				document.getElementById('divResult').innerHTML = 'U hebt rood gekozen als kleur';
+				document.getElementById('divResult').style.color = 'red';
+				break;		// stop hier
+			}
+			case 'blauw': {	// start hier als kleur === 'blauw'
+				document.getElementById('divResult').innerHTML = 'U hebt blauw gekozen als kleur';
+				document.getElementById('divResult').style.color = 'blue';
+				break;
+			}
+			case 'geel': {	// start hier als kleur === 'geel'
+				document.getElementById('divResult').innerHTML = 'U hebt geel gekozen als kleur';
+				document.getElementById('divResult').style.color = 'yellow';
+				break;
+			}
+			default: {
+				document.getElementById('divResult').innerHTML = 'U hebt een onbekende kleur gekozen';
+				document.getElementById('divResult').style.color = 'black';
+				break;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>load en unload</title>
+    <script>
+        window.addEventListener('load', function () {
+            alert('Hallo bezoeker, de pagina is nu geladen. Veel plezier!');
+        });
+
+        // Andere syntax, zelfde resultaat. De functie die wordt aangeroepen
+        // staat hier in een eigen function onLoad(). Hij kan dan eventueel nog
+        // vaker wordt aangeroepen. Meestal gebeurt dit overigens niet. U komt de
+        // notatie hierboven veel tegen.
+        // ------------
+        // window.addEventListener('load', onLoad)
+        // function onLoad () {
+        //     alert('Hallo bezoeker, de pagina is nu geladen. Veel plezier!');
+        // }
+
+        // de event onunload wordt niet in alle browsers goed verwerkt!
+        window.addEventListener('unload', function () {
+            alert('Bedankt voor uw bezoek, graag tot ziens!');
+        });
+    </script>
+</head>
+
+<body>
+<h2>load en unload</h2>
+<h2>Een irritant alert-venster...</h2>
+
+</body>
+</html>

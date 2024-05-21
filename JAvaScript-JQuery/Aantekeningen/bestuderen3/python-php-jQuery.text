@@ -1,0 +1,35 @@
+Python
+
+- Ontworpen door Guido van Rossum
+- Wordt gebruikt voor webdevelopment (server-side)
+- Heeft een simpele syntax
+- Werkt op verschillende platformen (Windows, Mac, Linux, Raspberry Pie)
+- Runt op een interpreter machine
+
+PHP
+
+- Staat voor Hyper text Preprocessor
+- Open source
+- PHP scripts worden op de server uitgevoerd
+
+jQuery
+
+- Is een javaScript libary
+- Versimpeld het JS programmeren
+- Is een single JS file, refereer er naar met de HTML tag <script src""></script> in de <head> sectie
+
+Basic jQuery syntax $(selector).action()
+
+$ om jQuery te definieren toegang te krijgen
+(selector) om het HTML element te vinden
+action() om een actie uit te voeren 
+
+Zorg dat de methode(s) in een document.ready event geplaatst zijn, om fouten te voorkomen met elementen die nog niet geladen zijn
+
+$(document).ready(function(){
+
+  // jQuery methods go here...
+
+});
+
+events -> alle verschillende acties van een bezoeker waar een webpagina op kan reageren.

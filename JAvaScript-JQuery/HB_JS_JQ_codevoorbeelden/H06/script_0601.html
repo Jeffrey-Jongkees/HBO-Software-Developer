@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <title>window.load()</title>
+    <script>
+        // Voer script uit zodra de pagina helemaal geladen is.
+        window.addEventListener('load', onLoad);
+        function onLoad() {
+            document.getElementById('divResult').innerHTML = 'Het document is geladen';
+        }
+
+        // Andere (oudere) schrijfwijze, hetzelfde resultaat
+        // window.onload = function () {
+        // 	document.getElementById('divResult').innerHTML = 'Het document is geladen op ouderwetse manier';
+        // }
+
+        // Schrijfwijze met moderne arrow function:
+        // window.addEventListener('load', () => {
+        //     document.getElementById('divResult').innerHTML = 'Het document is geladen via een arrowfunction';
+        // })
+    </script>
+</head>
+
+<body>
+<h2>De event 'load'</h2>
+<div id="divResult"></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<style>
+		#divResult {
+			border: 1px solid #999;
+			background-color: #ffc;
+			padding: 4px;
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+	<title>jQuery animations: show en hide</title>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// divResult verbergen na klik op knop
+			$('#btnHide').on('click', function () {
+				$('#divResult').hide();
+			});
+
+			// divResult tonen na klik op knop
+			$('#btnShow').on('click', function () {
+				$('#divResult').show();
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+	<div id="divResult">Lorem ipsum dummytekst dolor sit amet, consectetur adipisicing elit. Accusantium, fugiat incidunt minus perferendis quisquam tenetur totam ullam. Animi atque consectetur corporis dolorum eos esse eveniet, fugit id libero nulla sunt?</div>
+	<button id="btnHide">Verbergen</button>
+	<button id="btnShow">Tonen</button>
+</body>
+</html>
+
+

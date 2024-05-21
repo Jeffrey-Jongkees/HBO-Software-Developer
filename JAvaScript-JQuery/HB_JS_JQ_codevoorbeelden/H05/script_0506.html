@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Array.join()</title>
+</head>
+
+<body>
+	<h1>Array.join()</h1>
+	<p>Kijk in de DevTools console (F12) voor uitvoer.</p>
+	<div id="divResult"></div>
+
+	<script>
+		// Array.join - voegt elementen samen tot een string.
+		const mijnArray = [10, 20, 30, 40, 50]; // Array met vijf elementen
+		console.log(mijnArray.join()); // '10,20,30,40,50' .
+		console.log(mijnArray.join('*')); // '10*20*30*40*50' .
+
+		// Omgekeerd: string.split(), splits een string naar een array
+		const mijnTekst = 'Aap,Noot,Mies,Teun,Zus,Jet';
+		console.log(mijnTekst.split(','));
+
+		const getalNaarArray= '0623337156';
+		console.log(getalNaarArray.split('')); // elk teken wordt apart in de array gezet. Er wordt gesplitst op een Empty String
+	</script>
+</body>
+</html>

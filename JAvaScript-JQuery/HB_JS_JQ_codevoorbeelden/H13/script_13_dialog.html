@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery UI - Dialog</title>
+	<!-- Custom stijlen (themes) voor jQuery UI -->
+	<link href="../css/jquery-ui.css" rel="stylesheet" />
+	<!-- jQuery & jQuery UI insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script src="../script/jquery-ui.js"></script>
+	<script src="../script/jquery.ui.datepicker-nl.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#dialog').dialog({
+				autoOpen: false
+			});
+
+			$('#btnOpenDialog').on('click', function () {
+				$('#dialog').dialog('open');
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<h2>jQuery UI dialog</h2>
+	<div>
+		<button id="btnOpenDialog">Open dialog</button>
+		<div id="dialog" title="Speciale aanbieding">
+			<p>Nu in de aanbieding: vier tompoezen, voor maar &euro; 0,99.</p>
+		</div>
+	</div>
+</body>
+</html>
+
+

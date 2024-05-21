@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <style>
+        #divResult {
+            border: 1px solid #999;
+            background-color: #ffc;
+            padding: 4px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <title>jQuery ajax : load</title>
+    <!-- jQuery insluiten -->
+    <script src="../script/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Google ophalen.
+            // DIT WERKT NIET, als gevolg van de same domain policy in Javascript.
+            // De functie .load() geeft echter geen foutmelding in de console.
+            $('#btnLoad').on('click', function () {
+                $('#divResult').load('https://www.google.com', () => {
+                    $('#divResult').html('failed....');
+                });
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+<h2>De jQuery .load()-functie</h2>
+<button id="btnLoad">Haal Google op</button>
+<div id="divResult">Hier komt Google....</div>
+</body>
+</html>
+
+

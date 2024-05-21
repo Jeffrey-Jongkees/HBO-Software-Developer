@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <title>Boodschappenlijstje</title>
+    <script>
+        // Voer script uit zodra de pagina helemaal geladen is.
+        window.addEventListener('load', () => {
+            document.getElementById('btnKnop1').addEventListener('click', () => {
+                // 1. Lees de boodschap in het tekstvak
+                const lijst = document.getElementById('listBoodschappen');
+                const boodschap = document.getElementById('txtBoodschap').value;
+
+                // 2. Nieuw listitem maken
+                const nieuwItem = document.createElement('li');
+
+                // 3. Tekst instellen (nu via innerHTML, in plaats van via TextNode)
+                nieuwItem.innerHTML = boodschap + ' - ';
+
+                // 4. algemene link 'Verwijderen' toevoegen
+                const deleteLink = document.createElement('a');
+                deleteLink.innerHTML = 'Verwijder';
+                deleteLink.href = '#';
+                deleteLink.addEventListener('click', deleteBoodschap); // event handler instellen!
+                nieuwItem.appendChild(deleteLink);
+
+                // 5. Nieuw listitem toevoegen aan het DOM
+                lijst.appendChild(nieuwItem);
+            });
+
+            // algemene event handler om boodschap te verwijderen.
+            function deleteBoodschap(e) {
+                e.preventDefault();
+
+                // Haal het te verwijderen element uit het muisevent e.target.
+                const elementToBeDeleted = e.target.parentElement;
+
+                // Verwijder het uit de lijst.
+                document.getElementById('listBoodschappen').removeChild(elementToBeDeleted);
+            }
+        })
+    </script>
+</head>
+
+<body>
+<h2>Boodschappen doen</h2>
+<p>Wat moeten we kopen?</p>
+<input type="text" id="txtBoodschap" placeholder="uw boodschap"/>
+<button id="btnKnop1">Toevoegen</button>
+<div id="divResult">
+    <ul id="listBoodschappen"></ul>
+</div>
+</body>
+</html>

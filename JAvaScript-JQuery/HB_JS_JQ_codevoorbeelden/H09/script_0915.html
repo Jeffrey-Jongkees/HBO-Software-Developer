@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery CSS- en HTML-functies</title>
+	<!-- CSS -->
+	<style>
+		body {
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 24px;
+		}
+
+		.blauw {
+			color: #06F;
+		}
+	</style>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		// de functie .is()
+		$(document).ready(function () {
+			// klik op keuzerondjes afvangen
+			$('input[type=radio]').on('click', function () {
+				$('#divResult').text('Gekozen: '+ $(this).val());
+			});
+
+		}); // einde document.ready
+	</script>
+</head>
+
+<body>
+	<input type="radio" name="radioGroup1" value="geel" />Geel<br />
+	<input type="radio" name="radioGroup1" value="rood" />Rood<br />
+	<input type="radio" name="radioGroup1" value="blauw" />Blauw<br />
+	<div id="divResult"></div>
+</body>
+</html>
+
+

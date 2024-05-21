@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>De for-lus</title>
+</head>
+
+<body>
+	<h1>De for-lus</h1>
+	<div id="divResult"></div>
+
+	<script>
+		const getal = 10;
+		// vraag: waarom wordt in de for-lus 'let' gebruikt en niet 'const'?
+		for (let teller = 1; teller <= 10; teller++) {
+			document.getElementById('divResult').innerHTML +=
+				teller + ' maal ' + getal + ' = ' + teller * getal + '<br />';
+		}
+
+	</script>
+</body>
+</html>

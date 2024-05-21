@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery UI - Redmond theme</title>
+	<!-- Custom stijlen (themes) voor jQuery UI -->
+	<link href="../css/redmond/jquery-ui.css" rel="stylesheet" />
+	<!-- jQuery & jQuery UI insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script src="../script/jquery-ui.js"></script>
+	<script src="../script/datepicker-nl.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#datepicker').datepicker(
+					// Stel Nederlands in als taal
+					$.datepicker.regional['nl']
+			);
+		});
+	</script>
+</head>
+
+<body>
+	<h2>jQuery UI Redmond theme</h2>
+	<div>
+		Kies een datum:
+		<input type="text" id="datepicker" />
+	</div>
+</body>
+</html>
+
+

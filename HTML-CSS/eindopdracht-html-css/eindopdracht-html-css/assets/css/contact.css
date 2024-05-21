@@ -1,0 +1,26 @@
+
+.h1-element {
+    text-align: center;
+    color: black;
+}
+
+.contactpagina-body {
+    background-image: linear-gradient(rgb(62, 228, 228), rgb(62, 228, 228), grey, rgb(62, 228, 228));
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: [col-1] auto [col-2] auto [end];
+    grid-template-rows: [row-1] 100% [row-2];
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    
+}
+
+form {
+    grid-column-start: col-1;
+    grid-column-end: col-1;
+    grid-row-start: row-1;
+    grid-row-end: row-2;
+}

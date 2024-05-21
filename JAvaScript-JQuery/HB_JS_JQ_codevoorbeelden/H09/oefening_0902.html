@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery CSS- en HTML-functies</title>
+	<!-- CSS -->
+	<style>
+		body {
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 24px;
+		}
+
+		.blauw {
+			color: #06F;
+		}
+
+		#divResult {
+			width: 200px;
+			height: 150px;
+			border: 2px solid #D3D3D3;
+			margin: 10px 0;
+		}
+
+		#txtColor {
+			width: 200px;
+		}
+	</style>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+
+			$('#btnSetColor').on('click', function () {
+
+				// 1. Haal kleurwaarde op
+				const waarde = $('#txtKeuze').val();
+
+				// 2. Haal geselecteerde keuzerondje op
+				const keuze = $('input[name=type]:checked').attr('id');
+
+				// 3. Op basis van choice de gewenste handeling uitvoeren.
+				//		Hier zijn if-statements gebruikt, het kan eventueel ook
+				//		via een switch-statement.
+				if (keuze === 'rdBackground') {
+					// 3a. achtergrond.
+					$('#divResult').css('background-color', waarde);
+				} else if (keuze === 'rdForeground') {
+					// 3b. voorgrond.
+					$('#divResult').css('color', waarde);
+				} else if (keuze === 'rdText') {
+					// 3c. Tekst aanpassen
+					$('#divResult').text(waarde)
+				} else if (keuze === 'rdHeight') {
+					// 3d. Hoogte.
+					$('#divResult').css('height', waarde + 'px');
+				} else if (keuze === 'rdWidth') {
+					// 3e. Breedte.
+					$('#divResult').css('width', waarde + 'px');
+				}
+			});
+
+			// Tekstvak leegmaken als er in wordt geklikt
+			$('#txtKeuze').on('click', function () {
+				$(this).val('');
+			});
+		}); // einde document.ready
+	</script>
+</head>
+
+<body>
+	<input type="radio" id="rdForeground" name="type" checked />Voorgrond
+	<input type="radio" id="rdBackground" name="type" />Achtergrond
+	<input type="radio" id="rdText" name="type" />Tekst
+	<input type="radio" id="rdHeight" name="type" />Hoogte
+	<input type="radio" id="rdWidth" name="type" />Breedte<br />
+
+	<input type="text" id="txtKeuze" placeholder="Uw waarde..." />
+	<button id="btnSetColor">Stel in</button><br />
+	<div id="divResult">Voorbeeld tekst</div>
+
+</body>
+</html>

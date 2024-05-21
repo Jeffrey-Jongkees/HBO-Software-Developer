@@ -1,0 +1,42 @@
+VARIABELEN
+
+var -> niet meer gebruiken is verouderd
+
+let en const gebruiken. Probeer zoveel mogelijk const te gebruiken. Gebruik let alleen als de waarde van de variabel moet kunnen worden gewijzigd.
+const gebruiken is een best practice.
+let en const komen voor in/sinds ES6 (ECMAScript 2015 is also known as ES6 and ECMAScript 6.)
+
+De naam van een variabel wordt ook wel identifier genoemd
+
+variabel naam regels
+
+- moet met een letter of underscore beginnen ( _ ) geen cijfers
+- mogen alle leters van hetalfabet bevatten groot en klein
+- JS is case sensitive
+- namen mogen geen spaties of leestekens bevatten: , . # $ < > - 
+- gereserveerde keywords mogen ook niet gebruikt worden
+
+JS is loosely typed - JAVA, C zijn strongly typed -> moet precies aangeven wat voor type  de variabel is (number getal1 = 8;)
+
+Variables are used in programming languages to refer to a value stored in memory.
+
+
+STRINGS
+
+string getallen omzetten naar nummers -> parseInt() - parseFloat()
++ teken mag ook, wordt niet door alle browsers ondersteund en is ook lastiger te lezen
+
+\n -> nieuwe regel
+\t tab in de regel
+
+"Hij zei: \"Dat doe ik nooit meer\"" -> met de backslash escape je de "" zo kan je twee keer "" in een string hebben. 
+Anders moeten er '' gebruikt worden: 'Hij zei: "Dat doe ik nooit meer"'
+Tweek keer \\ gebruiken als de backslash ge-escaped moet worden
+
+OBJECTTYPEN
+
+Bekendste typen zijn:
+
+- Array
+- OBJECT
+- function

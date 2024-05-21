@@ -1,0 +1,35 @@
+machine code/assembly language -> zijn low level code. Geassioceerd met de hardware van een computer. Moeilijke talen om in te programmeren, omdat het hele abstracte code is en gelieeerd zijn
+aan de computers architecture.
+
+High level prgramming languages: C, C++, Java -> zijn programming languages -> wordt gecompileerd naar machine code en dan uitgevoerd.
+
+High level scripting language -> JavaScript is een scripting languages -> worden geinterpreteerd als machine language tijdens runs time. Is iets lanngzamer dan programming languages.
+
+Netscape -> early browser vendor -> concurrent van Microsoft
+
+Eerste versie van JS -> Mocha -> "The new language was originally called Mocha, but it was changed to LiveScript,
+then hastily rebranded as JavaScript so it could beneit from the publicity that
+Sun Microsystem’s Java language was attracting at the time. The languages are unrelated"
+
+ECMAScript is de officiele naam van de taal
+
+In 10 dagen gebouwd in 1995-> eerste introductie in Netscape's Navigator V2 in 1995
+
+JScript -> Microsoft's versie van JS
+
+DHTML -> " to refer to the use of JavaScript to make HTML more interactive and dynamic"
+
+AJAX -> Asynchronous JavaScript And XML
+"This described a technique of obtaining data from a server in
+the background and updating only the relevant parts of the web page without the
+need for a full page reload, enabling users to continue interacting with the rest of
+the page. This created a more seamless experience for users and was used
+extensively in many Web 2.0 applications"
+
+Node.Js -> ontstaan in 2009 -> zorgde ervoor dat server-side applications in JavaScript geschreven konden worden
+
+Isomorphic JavaScript "The popularity of Node has lead to an interesting development known as
+Isomorphic JavaScript. This involves having the same JavaScript code that can be
+run either on the client or server side: if a browser is unable to run the code, it
+can be run on the server and downloaded, or if the server is unavailable, the code
+can be run on the client."

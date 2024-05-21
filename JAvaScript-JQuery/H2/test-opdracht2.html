@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Weergeven van een string</title>
+</head>
+
+<body>
+    <h1>Type een tekst</h1>
+    
+    <!-- <button id="string" onclick="stringInvoeren()">Invoeren</button>
+    <div id="divResult"></div>
+    <script src="stringinvoeren.js"></script> -->
+
+    <div id="divResult"></div>
+
+    <script>
+        const zin = prompt('Voer hier uw zin in:');
+        const ingevoerdeZin = 'Uw tekst: ' + '"' + zin + '"';
+        const spatie = '<br>De eerste spatie staat op positie: ' + zin.indexOf(' ');
+        const totaal = ingevoerdeZin + spatie
+        document.getElementById('divResult').innerHTML = totaal;
+    </script>
+
+</body>
+</html>

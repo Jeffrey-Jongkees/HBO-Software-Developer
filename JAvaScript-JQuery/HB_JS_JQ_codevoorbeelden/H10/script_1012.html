@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <title>jQuery animation</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+        }
+
+        #menu li {
+            display: block;
+            width: 150px;
+            height: 24px;
+            background-color: #FF9933;
+            border: 1px solid #309;
+            padding: 10px;
+            margin: 4px 10px;
+            cursor: pointer;
+        }
+    </style>
+    <!-- jQuery insluiten -->
+    <script src="../script/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            // Animatie voor het menu. Eerst de options, daarna de functie/eventhandler
+            const hoverInOptions = {
+                'margin-left': '+=50px',
+                'font-size': '+=2px'
+            };
+            const hoverOutOptions = {
+                'margin-left': '-=50px',
+                'font-size': '-=2px'
+            };
+
+            $('#menu li').hover(
+                // hover in
+                function () {
+                    $(this).animate(hoverInOptions, 200);
+                },
+                // hover out
+                function () {
+                    // $('#menu li').finish(); // stop eerst alle eventueel nog lopende animaties
+                    $(this).animate(hoverOutOptions, 200);
+                }
+            );
+        });
+
+    </script>
+</head>
+
+<body>
+<ul id="menu">
+    <li>Eerste item</li>
+    <li>Tweede item</li>
+    <li>Derde item</li>
+    <li>Vierde item</li>
+    <li>Vijfde item</li>
+</ul>
+</body>
+</html>
+
+

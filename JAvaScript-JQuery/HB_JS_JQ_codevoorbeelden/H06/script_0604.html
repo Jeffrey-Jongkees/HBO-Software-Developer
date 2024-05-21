@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <title>mouse events -click</title>
+    <script>
+        // globale variabele
+        let numClicks = 0; // gebruik hier 'let', omdat numClicks wordt gewijzigd.
+
+        // 1. Voer script uit zodra de pagina helemaal geladen is.
+        window.addEventListener('load', function () {
+            // 2. caching van HTML-elementen in variabelen
+            const divResult = document.getElementById('divResult');
+
+            // 3. event handler voor de knop
+            document.getElementById('btnKnop1').addEventListener('click', function () {
+                // variabele ophogen
+                numClicks++;
+                divResult.innerHTML = numClicks + ' keer geklikt!';
+            });
+
+            // 4. andere notatie, zelfde effect.
+            //document.getElementById('btnKnop1').onclick = function () {
+            //	numClicks++;
+            //	divResult.innerHTML = numClicks + ' keer geklikt!';
+            //};
+
+            // 5. Met arrow function. Andere notatie, zelfde effect.
+            // document.getElementById('btnKnop1').onclick = () => {
+            //     numClicks++;
+            //     divResult.innerHTML = numClicks + ' keer geklikt!';
+            // };
+
+        }) // einde window.onload
+
+    </script>
+</head>
+
+<body>
+<h2>Klikken op knoppen afvangen</h2>
+<button id="btnKnop1">Hoeveel muiskliks?</button>
+<div id="divResult"></div>
+</body>
+</html>

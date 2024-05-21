@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <style>
+        #divResult {
+            border: 1px solid #999;
+            background-color: #ffc;
+            padding: 4px;
+            width: 400px;
+            height: 200px;
+            overflow-y: scroll;
+        }
+    </style>
+    <title>jQuery ajax: valutacalculator</title>
+    <script src="../script/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#Valutacalculator').on('click', function () {
+                var valutaCalculator = 'https://openexchangerates.org/api/latest.json?app_id=9ec46fec619149b182d4eef4dd5edc90';
+                $.ajax({
+                    url: valutaCalculator,
+                    success: function (valuta) {
+                        // De base rate is 1 USD
+                        // 1. Lees uit hoeveel dollars worden gevraagd
+                        const gevraagdUSD = parseInt($('#geld').val());
+                        // 2. Vermenigvuldig met de gevonden koers. Afronden op 2 decimalen met .toFixed()
+                        const koersEUR = (valuta.rates.EUR * gevraagdUSD).toFixed(2);
+                        const koersGBP = (valuta.rates.GBP * gevraagdUSD).toFixed(2);
+                        const koersJPY = (valuta.rates.JPY * gevraagdUSD).toFixed(2);
+
+                        // 3. Resultaat schrijven
+                        console.log(valuta);
+                        $("#divResult").empty();
+                        const euro = koersEUR + ' euro' + '<br>';
+                        const pond = koersGBP + ' Britse ponden' + '<br>';
+                        const yen = koersJPY + ' Japanse yen' + '<br>';
+                        $('#divResult').append(euro, pond, yen);
+                    }
+                });
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+<h2>Valutacalculator</h2>
+<input type="number" id="geld" placeholder="Amerikaanse Dollars"/>
+<button id="Valutacalculator">Omrekenen!</button>
+<div id="divResult"></div>
+</body>
+</html>
+
+

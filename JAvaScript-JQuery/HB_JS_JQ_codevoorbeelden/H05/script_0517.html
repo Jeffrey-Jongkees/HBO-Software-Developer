@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Gebruik van this</title>
+</head>
+
+<body>
+	<h1>Gebruik van this</h1>
+	<div id="divResult"></div>
+
+	<script>
+		function Book(titel, auteur) {
+			this.titel = titel;
+			this.auteur = auteur;
+		}
+
+		const boekHtml = new Book('Handboek HTML', 'Peter Kassenaar');
+		const boekWindows = new Book('Ontdek Windows 11', 'Bob van Duuren');
+
+		// Er zijn nu twee boek-objecten, elk met een eigen titel en auteur.
+		console.log(boekHtml.auteur);	// Peter Kassenaar
+		console.log(boekWindows.titel);	// Ontdek Windows 11
+	</script>
+</body>
+</html>

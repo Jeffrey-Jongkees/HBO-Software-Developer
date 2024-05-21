@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<style>
+		p {
+			cursor: pointer;
+		}
+
+		#divResult {
+			border: 1px solid #999;
+			padding: 4px;
+		}
+	</style>
+	<title>jQuery events</title>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// Click-event aanhaken bij de paragrafen
+			$('p').click(function () {
+				$('#divResult').text('Geklikt op: ' + $(this).text());
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+	<p>Dit is de eerste paragraaf</p>
+	<p>Dit is de tweede paragraaf</p>
+	<p>Dit is de derde paragraaf</p>
+	<p>Dit is de vierde paragraaf</p>
+	<p>Dit is de vijfde paragraaf</p>
+	<p>Dit is de zesde paragraaf</p>
+	<div id="divResult"></div>
+</body>
+</html>

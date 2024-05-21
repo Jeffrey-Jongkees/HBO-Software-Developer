@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>Array.filter()</title>
+</head>
+
+<body>
+<h1>Array.filter()</h1>
+<p>Kijk in de DevTools console (F12) voor uitvoer.</p>
+<div id="divResult"></div>
+
+<script>
+    // Standaard array
+    const mijnArray = ['rood', 'geel', 'blauw', 'zwart', 'wit', 'beige', 'bruin'];
+    console.log('Originele array: ', mijnArray);
+
+    // .filter() - een item wordt alleen geretourneerd als aan de voorwaarde wordt
+    // voldaan (hier: beginnen met de letter 'b'). Anders wordt het element eruit gefilterd.
+    const mijnFilterArray = mijnArray.filter(function (kleur) {
+        return kleur.startsWith('b');
+    });
+    console.log('Gefilterde array: ', mijnFilterArray);// ["blauw", "beige", "bruin"]
+
+
+    // De functie kan korter worden geschreven als arrow-functie:
+    const mijnFilterArray2 = mijnArray.filter(kleur => kleur.startsWith('b'));
+</script>
+</body>
+</html>

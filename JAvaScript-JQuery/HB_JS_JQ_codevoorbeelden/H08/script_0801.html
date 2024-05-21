@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery basisvoorbeelden</title>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+	<h2>jQuery basisvoorbeelden</h2>
+	<p>De eerste paragraaf.</p>
+	<p>Nog een paragraaf.</p>
+	<div>Tekst in een div.</div>
+	<p>Een derde paragraaf.</p>
+	<hr />
+	<div id="divResult"></div>
+
+	<script>
+		// Selecteer alle <p>'s in de pagina en maak ze groen
+		const paragrafen = $('p');
+		paragrafen.css('background-color', 'limegreen');
+
+		// Dit is gelijk aan:
+		// $('p').css('background-color', 'limegreen');
+	</script>
+</body>
+</html>

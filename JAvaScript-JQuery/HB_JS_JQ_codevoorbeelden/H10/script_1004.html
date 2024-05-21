@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<style>
+		#divResult {
+			border: 1px solid #999;
+			background-color: #ffc;
+			padding: 4px;
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+	<title>jQuery animations: slideToggle</title>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// divResult omhoog en omlaag schuiven na klik op knop
+			$('#btnToggle').on('click', function () {
+				$('#divResult').slideToggle();
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+	<div id="divResult">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consectetur dicta doloribus ducimus enim eum exercitationem facilis in, itaque labore officiis omnis porro, quas quasi quo sed similique ullam voluptate?</div>
+	<button id="btnToggle">Wissel zichtbaarheid</button>
+</body>
+</html>
+
+

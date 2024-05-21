@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<style>
+		body {
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 24px;
+		}
+		#divResult {
+			background-color: #ffc;
+			width: 300px;
+			height: 100px;
+			border: 1px solid #333;
+			border-radius: 4px;
+		}
+	</style>
+	<title>jQuery events - .change()</title>
+	<!-- JavaScript -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// De event change
+			$('#lijstKleuren').on('change', function (e) {
+				$('#divResult').html('Geselecteerde kleur: ' + $(this).val());
+			});
+
+			$('#txtNaam').on('change', function () {
+				$('#divResult').html('Event change opgetreden voor tekstvak: ' + $(this).val());
+			});
+		});
+	</script>
+</head>
+
+<body>
+<!-- HTML -->
+<select id="lijstKleuren">
+	<option value="Rood">Rood</option>
+	<option value="Groen">Groen</option>
+	<option value="Blauw">Blauw</option>
+	<option value="Geel">Geel</option>
+</select>
+<input type="text" id="txtNaam" placeholder="Uw naam..." />
+<div id="divResult"></div>
+</body>
+</html>
+
+

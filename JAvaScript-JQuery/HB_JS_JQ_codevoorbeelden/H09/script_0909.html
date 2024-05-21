@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery CSS- en HTML-functies</title>
+	<!-- CSS -->
+	<style>
+	body{
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:24px;
+	}
+	.blauw{
+		color: #06F;
+	}
+	</style>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		// .append() en .prepend()
+		const divResult = $('#divResult'); // caching in variabele.
+
+		divResult.append('<p>Deze tekst wordt achteraan toegevoegd</p>');
+		divResult.prepend('<p>Deze tekst wordt vooraan toegevoegd</p>');
+
+		/* Mogelijke uitwerking van de oefening aan het einde van het hoofdstuk:
+
+		$('#divResult').append('<hr />');
+		for (var i =0; i < 5; i++){
+			$('#divResult').append('achteraan toegevoegd : ' + i +'<br />');
+		}
+
+		for (var i =0; i < 5; i++){
+			$('#divResult').prepend('vooraan toegevoegd : ' + i +'<br />');
+		}
+		*/
+	}); // einde document.ready
+	</script>
+</head>
+
+<body>
+	<div id="divResult"></div>
+</body>
+</html>

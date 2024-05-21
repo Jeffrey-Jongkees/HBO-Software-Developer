@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Het statement return;</title>
+</head>
+
+<body>
+	<h2>Het statement return;</h2>
+	<div id="divResult"></div>
+
+	<script>
+		// variabele
+		const getal = 15;
+
+		// functie - zie ook volgende hoofdstuk!
+		function kwadraat(x) {
+			const result = x * x;
+			return result;
+		}
+
+		// functieaanroep
+		document.getElementById('divResult').innerHTML +=
+			'het kwadraat van ' + getal + ' is ' + kwadraat(getal);
+
+	</script>
+</body>
+</html>

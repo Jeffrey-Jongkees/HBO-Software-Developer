@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Object retourneren uit een functie</title>
+</head>
+
+<body>
+	<h1>Object retourneren uit een functie</h1>
+	<div id="divResult"></div>
+
+	<script>
+		// 1. Functie declareren
+		function kwadraat(getal) {
+			// 1a. Kwadraat uitrekenen
+			const kwadraat = getal * getal;
+
+			// 1b. Resultaatstring toekennen.
+			const resultaat = 'OK';
+
+			// 1c. Resultaatobject teruggeven
+			return {
+				'uitkomst': kwadraat,
+				'resultaat' : resultaat
+			};
+
+		}
+
+		// 2. Functie aanroepen
+		const aanroep = kwadraat(5);
+
+		// 3. De variabele 'aanroep' is nu een object met twee leden.
+		// De inhoud van het lid 'uitkomst' moet naar het scherm worden geschreven.
+		document.getElementById('divResult').innerHTML =
+			'Het kwadraat van 5 is: ' + aanroep.uitkomst;
+
+	</script>
+</body>
+</html>

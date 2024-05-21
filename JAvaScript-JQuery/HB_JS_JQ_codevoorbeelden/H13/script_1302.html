@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<style>
+		#slider, #divSliderValue {
+			margin: 10px auto;
+			width: 60%;
+		}
+
+		h2, #divSliderValue {
+			text-align: center;
+		}
+	</style>
+	<title>jQuery UI - slider</title>
+	<!-- stijlen voor jQuery UI -->
+	<link href="../css/jquery-ui.css" rel="stylesheet" />
+	<!-- jQuery & jQuery UI insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script src="../script/jquery-ui.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#slider').slider({
+				min: 0,
+				max: 100,
+				value: 50,
+				animate: true,
+				slide: function (event, ui) {
+					$('#divSliderValue').html('Waarde: ' + ui.value);
+				}
+			});
+
+			// Onderstaande heeft hetzelfde effect (event handler gedefinieerd in aparte functie).
+			// In dat geval de regels met slide:... weghalen uit configuratieobject.
+			//
+			//$('#slider').on('slide', function (event, ui) {
+			//	$('#divSliderValue').html('Waarde: ' + ui.value);
+			//});
+
+		});
+	</script>
+</head>
+
+<body>
+	<h2>jQuery UI Slider</h2>
+	<div id="slider"></div>
+	<div id="divSliderValue">Waarde: 50</div>
+</body>
+</html>
+
+

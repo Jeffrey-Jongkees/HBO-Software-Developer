@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8">
+        <title>Boekingspagina om een kamer te boeken in het #1 hotel van de Dominicaanse Republiek.</title>
+        <!-- <link> tag weggelaten omdat er geen CSS gebruikt wordt -->
+    </head>
+    <body>
+        <header>
+            <h2>
+                Accomodatie boeken
+            </h2>
+            <p>
+               Reserveer nu op deze pagina uw kamer. Op deze pagina ziet u ook nog wat extra foto's en een filmpje van de prachtige omgeving.
+            </p>
+        </header>  
+        
+        <section>
+            <h3>Adresgegevens</h3>
+            <form id="boeking">
+                <p>
+                    <label for="naam"><strong>Naam:</strong></label><br>
+                    <input type="text" id="naam" name="naam" required>
+                </p>
+                
+                <p>
+                    <label for="adres"><strong>Adres:</strong></label><br>
+                    <input type="text" id="adres" name="adres" required>
+                </p>
+                
+                <p>
+                    <label for="postcode"><strong>Postcode:</strong></label><br>
+                    <input type="text" id="postcode" name="postcode" placeholder="1234 AB" pattern="[0-9]{4}\s?[A-Za-z]{2}" title="Nederlandse postcode" required>
+                </p>
+               
+                <p>
+                    <label for="woonplaats"><strong>Woonplaats:</strong></label><br>
+                    <input type="text" id="woonplaats" name="woonplaats" required>
+                </p>
+                
+                <p>
+                    <label for="telefoonnummer"><strong>Telefoonnummer:</strong></label><br>
+                    <input type="tel" id="telefoonnummer" name="telefoonnummer" required>
+                </p>
+               
+                <p>
+                    <label for="emailadres"><strong>Emailadres:</strong></label><br>
+                    <input type="email" id="emailadres" name="emailadres" placeholder="mijnemailadres@me.nl" required>
+                </p>
+            </form>
+        </section>
+        
+        <section>
+            <h3>Reservering</h3>
+                <p>
+                    <label for="aantal"><strong>Aantal personen:</strong><br>
+                        <small>Minmaal 1 persoon maximaal 10 personen</small></label><br>
+                    <input form="boeking" type="number" id="aantal" name="aantal" min="1" max="10" required>
+                </p>
+                
+                <p>
+                    <label for="aankomst"><strong>Aankomst datum:</strong></label><br>
+                    <input form="boeking" type="date" id="aankomst" name="aankomst"  required>
+                </p>
+               
+                <p>
+                    <label for="verblijfsduur"><strong>Verblijfsduur:</strong></label><br>
+                    <small>Minmaal 2 dagen maximaal 20 dagen</small><br>
+                    <input form="boeking" type="range" id="verblijfsduur" name="verblijfsduur" min="2" max="20" step="2" value="2"
+                    oninput="updateVerblijfsduurValue(this.value)">
+                    <span id="verblijfsduurValue">2</span> dagen
+
+                    <script>
+                        function updateVerblijfsduurValue(value) {
+                            document.getElementById('verblijfsduurValue').textContent = value;
+                        }
+                    </script>
+                    <!-- Met alleen de kennis van Hoofdstuk 1 t/6 zou ik niet weten hoe ik met "range" zonder JS het aantal dagen zichtbaar krijg. -->
+                </p>
+               
+                <p>
+                    <label for="verzorging"><strong>Verzorging:</strong></label><br>
+                    <select form="boeking" id="verzorging" name="verzorging"  required>
+                        <option value="" disabled selected>Kies uw verzorgingstype</option>
+                        <option value="logies">logies</option>
+                        <option value="logies met ontbijt">logies met ontbijt</option>
+                        <option value="halfpension">halfpension</option>
+                        <option value="volpension">volpension</option>
+                    </select>
+                </p>
+               
+                <p>
+                        <label for="annulerenJa"><strong>Annuleringsverzekering:</strong><br>
+                            <input form="boeking" type="radio" id="annulerenJa" name="annuleren" value="Ja"  required>
+                            <span>Ja</span>
+                        </label>
+                        <label for="annulerenNee"><br>
+                            <input form="boeking" type="radio" id="annulerenNee" name="annuleren" value="Nee"  required>
+                            <span>Nee</span>
+                        </label>
+                </p>
+               
+                <p>
+                    <label for="opmerkingen"><strong>Opmerkingen:</strong></label><br>
+                    <textarea form="boeking" id="opmerkingen" name="opmerkingen" wrap="hard" cols="50" rows="20"></textarea>
+                </p>
+                
+                <button form="boeking" type="submit" formaction="https://jkorperla.fi/cgi-bin/echo.cgi">Reserveer</button>
+        </section>
+
+        <section>
+            <h3 id="bladwijzer">Foto's</h3>
+                <figure>
+                    <img src="./afbeeldingen/comfortabeleBedden.jpg" height="250" width="500" alt="bedden">
+                    <figcaption>Heerlijke comfortabele bedden</figcaption>
+                </figure>
+                <figure>
+                    <img src="./afbeeldingen/douche.jpg" height="250" width="500" alt="badkamer">
+                    <figcaption>Badkamer met alle benodigheden</figcaption>
+                </figure>
+                <figure>
+                    <img src="./afbeeldingen/uitzicht.jpg" height="250" width="500" alt="uitzicht">
+                    <figcaption>Prachtig uitzicht over het de zee</figcaption>
+                </figure>
+                <figure>
+                    <img src="./afbeeldingen/restaurant.jpg" height="250" width="500" alt="restaurant">
+                    <figcaption>Restaurant om heerlijk te dineren</figcaption>
+                </figure>
+                <figure>
+                    <img src="./afbeeldingen/gym.jpg" height="250" width="500" alt="gym">
+                    <figcaption>De fitness ruimte voor uw dagelijkse beweging</figcaption>
+                </figure>
+            
+        </section>
+
+        <section>
+            <h3>Filmpje</h3>
+            <p>Hier alvast een voorproefje van de omgeving.</p>
+            <video src="./filmpje/Dominicaanse_Republiek.mp4" controls preload="none" poster="./afbeeldingen/video-poster.png" height="250" width="500"></video>
+        </section>
+    </body>
+</html>

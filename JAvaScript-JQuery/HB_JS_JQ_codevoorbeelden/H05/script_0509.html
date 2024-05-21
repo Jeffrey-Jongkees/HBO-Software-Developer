@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>Array.push()</title>
+</head>
+
+<body>
+<h1>Array.push()</h1>
+<p>Kijk in de DevTools console (F12) voor uitvoer.</p>
+<div id="divResult"></div>
+
+<script>
+    // Array.sort - sorteert de elementen in de array op alfabetische volgorde.
+    const mijnArray = ['rood', 'geel'];
+    mijnArray.push('blauw');
+    console.log(mijnArray); // ["rood", "geel", "blauw"]
+
+    mijnArray.push('wit, zwart');
+    console.log(mijnArray); // ["rood", "geel", "blauw". "wit, zwart"] Let op: "wit, zwart" is hier toegevoegd als één element!
+
+</script>
+</body>
+</html>

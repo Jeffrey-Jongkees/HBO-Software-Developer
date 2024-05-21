@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Voorwaardelijke operator</title>
+</head>
+
+<body>
+	<h1>Voorwaardelijke operator</h1>
+	<div id="divResult"></div>
+
+	<script>
+		// 1. Initialisaties
+		const vraag = 'Hoeveel is 20 + 60 ?';
+		const antwoord = 80;
+		const goed = '<h2> Prima, ga zo door! </h2>';
+		const fout = '<h2> Jammer, volgende keer beter !</h2>';
+
+		// 2. Vraag stellen
+		const response = parseInt(prompt(vraag, '0'));
+
+		// 3. Controleer het antwoord
+		const resultaat = (response === antwoord) ? goed : fout;
+
+		// 4. Schrijf resultaat naar het scherm
+		document.getElementById('divResult').innerHTML = resultaat;
+
+	</script>
+</body>
+</html>

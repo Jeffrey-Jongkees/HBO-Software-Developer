@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<style>
+		#divResult {
+			border: 1px solid #999;
+			background-color: #ffc;
+			padding: 4px;
+			width: 400px;
+			height: 200px;
+			overflow-y: scroll;
+		}
+	</style>
+	<title>jQuery ajax: get weather</title>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// Algemene instellingen voor elke AJAX-call
+			$.ajaxSetup({
+				// standaard error handling voor alle calls:
+				error: function (jqXhr, textStatus, errorThrown) {
+					alert('Er is een fout opgetreden: ' + textStatus);
+					// Doe evt. meer met foutcontrole
+				}
+			});
+
+
+			// Weer voor gezochte stad ophalen bij klik op knop
+			$('#btnGetWeather').on('click', function () {
+				// 1. Nieuwe URL, met mijn API-key (registreer evt voor een eigen API key, op https://home.openweathermap.org/users/sign_up
+				let weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?appid=8566d604cd9402b65394b034e52aa2af&q=';
+				// 2. Nieuwe URL, met verwijzing voor detailgegevens van de gekozen stad (afbeelding 12.16).
+				const stadUrl = 'https://openweathermap.org/city/';
+				weatherUrl += $('#txtCity').val();
+				weatherUrl += '&units=metric&lang=nl';
+
+				$.ajax({
+					url: weatherUrl,
+					success: function (weather) {
+						console.log(weather);
+						// 3. caching, voorkom meerdere $() selectors in een functie.
+						const divResult = $('#divResult');
+						divResult.empty();
+						// alles OK.
+						let html = '<strong><a href="' + stadUrl + weather.id;
+						html += '" target="_blank">' + weather.name;
+						html += ' (' + weather.sys.country + ')</a></strong>';
+						html += ', temperatuur: ' + weather.main.temp + ' graden.<br />';
+						divResult.append(html);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<h2>Wat voor weer is het in...</h2>
+	<input type="text" id="txtCity" placeholder="Plaatsnaam" />
+	<button id="btnGetWeather">Wat voor weer is het?</button>
+	<div id="divResult"></div>
+</body>
+</html>
+
+

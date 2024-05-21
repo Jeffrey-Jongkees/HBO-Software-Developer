@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Getallen invoeren</title>
+</head>
+
+<body>
+    <h1>Voer getallen in</h1>
+
+    <div id="divResult"></div>
+    <hr />
+    <div id="vergelijking"></div>
+
+    <script>
+        const getal1 = prompt('Voer uw eerste getal in:');
+        const getal2 = prompt('Voer uw tweede getal in:');
+        const tekst1 = "De getallen die u invoerde waren " + getal1 + " en " + getal2;
+        document.getElementById('divResult').innerHTML = tekst1;
+
+        let tekst2 = "Is het eerste getal groter dan het tweede getal? " + (getal1 > getal2);
+        tekst2 = "<br>Is het eerste getal kleiner dan het tweede getal? " + (getal1 < getal2);
+        tekst2 = "<br>Is het eerste getal gelijk aan het tweede getal? " + (getal1 === getal2);
+        document.getElementById('vergelijking').innerHTML = tekst2;
+
+    </script>
+
+</body>
+</html>
+
+

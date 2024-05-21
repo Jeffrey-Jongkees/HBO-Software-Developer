@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<style>
+		img {
+			width: 200px;
+			opacity: 0.4;
+		}
+	</style>
+	<title>jQuery animations: fadeTo</title>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// images en de functie fadeTo
+			$('img').on('mouseover', function () {
+				$(this).fadeTo('fast', 1.0);
+			}).on('mouseout', function () {
+				$(this).fadeTo('fast', 0.4);
+			});
+
+		});
+
+	</script>
+</head>
+
+<body>
+
+	<img src="../img/kitten1.jpg" alt="foto kitten 1" />
+	<img src="../img/kitten2.jpg" alt="foto kitten 2" />
+	<img src="../img/kitten3.jpg" alt="foto kitten 3" />
+</body>
+</html>
+
+

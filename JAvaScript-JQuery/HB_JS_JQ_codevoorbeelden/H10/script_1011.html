@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<style>
+		#divResult {
+			border: 1px solid #999;
+			background-color: #ffc;
+			padding: 4px;
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+	<title>jQuery animation: animate</title>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// custom functie .animate() met callback
+			const animationOptions = {
+				'width': '400px',
+				'font-size': '40px',
+				'height': '540px'
+			};
+			$('#btnAnimate').on('click', () => {
+				$('#divResult').animate(animationOptions, 1500, () => {
+					$('#divResult').text('Animatie gereed.');
+				});
+			});
+
+			// Reset: handmatig uitgangswaarden herstellen.
+			$('#btnReset').on('click', () => {
+				$('#divResult').removeAttr('style').text('Lorem ipsum ...');
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+	<div id="divResult">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ducimus modi placeat tenetur? Dignissimos eaque explicabo magni mollitia, obcaecati quo veritatis? Accusantium animi explicabo fugit impedit ipsa laboriosam omnis unde.</div>
+	<button id="btnAnimate">Animate</button>
+	<button id="btnReset">Reset</button>
+</body>
+</html>
+
+

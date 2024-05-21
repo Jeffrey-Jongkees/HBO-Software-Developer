@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Oneindige lus</title>
+</head>
+
+<body>
+	<h1>Oneindige lus - Doe dit niet!</h1>
+	<div id="divResult"></div>
+
+	<script>
+		// Let op! Oneindige lus.
+		let i = 1;
+		let j = 1;
+		while (j <= 10) {
+			document.getElementById('divResult').innerHTML += i;
+			i++;
+			// Maar wat gebeurt er met j ?!
+		}
+	</script>
+</body>
+</html>

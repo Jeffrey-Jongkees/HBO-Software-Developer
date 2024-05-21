@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Het statement for-in</title>
+</head>
+
+<body>
+	<h1>Het statement for-in</h1>
+	<div id="divResult"></div>
+
+	<script>
+		// variabele
+		var getal = 15;
+
+		// functie
+		function kwadraat(x) {
+			var result = x * x;
+			var status = 'OK';
+
+			// stel een object samen met het berekende resultaat en 
+			// een statuscode.
+			return {
+				resultaat: result,
+				statusCode: status
+			};
+		}
+
+		// functieaanroep
+		var result = kwadraat(getal);
+
+		// loop over alle eigenschappen van result
+		for (var i in result) {
+			document.getElementById('divResult').innerHTML +=
+				i + ': ' + result[i] + '<br />';
+		}
+	</script>
+</body>
+</html>

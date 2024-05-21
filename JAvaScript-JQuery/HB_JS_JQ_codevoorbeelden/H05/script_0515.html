@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Objecten</title>
+</head>
+
+<body>
+	<h1>Objecten</h1>
+	<p>Kijk in de DevTools console (F12) voor meer uitvoer.</p>
+	<div id="divResult"></div>
+
+	<script>
+		// Voorbeelden van objecten.
+		const leegObject = {};
+
+		const persoon = {
+			voornaam: 'Peter',
+			achternaam: 'Kassenaar',
+			woonplaats: 'Zutphen'
+		};
+
+		// Schrijf eigenschap van een object naar het scherm
+		document.getElementById('divResult').innerHTML = 'Voornaam: ' + persoon.voornaam;
+
+		// Schrijf hele object (in objectnotatie, tussen { ...} naar de console
+		console.log({persoon});
+	</script>
+</body>
+</html>

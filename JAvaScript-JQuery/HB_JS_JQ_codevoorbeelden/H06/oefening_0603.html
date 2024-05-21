@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>load en unload</title>
+    <script>
+        window.addEventListener('load', function () {
+            document.getElementById('btnToonNaam').addEventListener('click', function () {
+                const naam = document.getElementById('txtNaam').value;
+                let boodschap = '';
+                if (naam.length >= 2) {
+                    boodschap = 'Welkom ' + naam;
+                } else {
+                    boodschap = 'U moet een naam invullen';
+                }
+                alert(boodschap);
+            });
+        });
+    </script>
+</head>
+
+<body>
+<h2>toon naam in alert()</h2>
+<input type="text" id="txtNaam" placeholder="Wat is uw naam?"/>
+<button id="btnToonNaam">Toon naam</button>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>Array.reduce()</title>
+</head>
+
+<body>
+<h1>Array.reduce()</h1>
+<p>Kijk in de DevTools console (F12) voor uitvoer.</p>
+<div id="divResult"></div>
+
+<script>
+    // Standaard array
+    const mijnArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    console.log('Originele array: ', mijnArray);
+
+    // .reduce() - de array wordt gereduceerd tot een enkelvoudige waarde. Hier
+    // worden alle waarden bij elkaar opgeteld
+    const mijnTotaalArray = mijnArray.reduce(function (accumulator, item) {
+        return accumulator + item;
+    });
+    console.log('Opgetelde array: ', mijnTotaalArray); // 55
+
+
+    // De functie kan korter worden geschreven als arrow-functie:
+    const mijnTotaalArray2 = mijnArray.reduce((accumulator, item) => {
+        console.log('accumulator is nu:', accumulator);
+        return accumulator + item;
+    });
+</script>
+</body>
+</html>

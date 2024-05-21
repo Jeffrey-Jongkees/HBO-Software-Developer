@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<style>
+		#divResult {
+			border: 1px solid #999;
+			background-color:#ffc;
+			padding: 4px;
+			width:200px;
+			height:200px;
+		}
+	</style>
+	<title>jQuery animations: fadeToggle</title>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// divResult en de functie fadeToggle
+			$('#btnFadeToggle').on('click', function () {
+				$('#divResult').fadeToggle(800);
+			});
+
+		});
+
+	</script>
+</head>
+
+<body>
+	<div id="divResult">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cumque delectus et facilis iure nesciunt quae quas quo rem tempora! Adipisci blanditiis deserunt doloremque eligendi molestias saepe, sed tempore! Dolor?</div>
+	<button id="btnFadeToggle">Toggle faden</button>
+
+
+</body>
+</html>
+
+

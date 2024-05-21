@@ -1,0 +1,9 @@
+Voor readability, code lines niet langer dan 80 charachters maken
+
+plaats een break na een operator (+-=) of een (,)
+
+var -> niet gebruiken alleen voor oudere browsers. Var variabel kan ook buiten een {} scope gebruikt worden
+
+let -> kan niet niet opnieuw gedeclareerd worden. Wel kan er een nieuwe waarde/value toegewezen worden. Gebruik alleen waneer const niet gebruikt kan worden
+
+const -> kan niet opnieuw gedeclareerd worden. De value kan niet worden aangepast (array/object values kunnen wel aangepast worden)

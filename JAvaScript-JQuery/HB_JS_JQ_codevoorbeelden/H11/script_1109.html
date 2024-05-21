@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <style>
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 24px;
+        }
+
+        #divResult {
+            background-color: #ffc;
+            width: 300px;
+            height: 100px;
+            border: 1px solid #333;
+            border-radius: 4px;
+        }
+    </style>
+    <title>jQuery select en trigger</title>
+    <!-- jQuery insluiten -->
+    <script src="../script/jquery-3.6.1.min.js"></script>
+    <script>
+        let teller = 0;
+        $(document).ready(function () {
+            // De event select
+            $('#txtVoornaam').on('select', function (e) {
+                $('#divResult').html('Event: er is tekst geselecteerd');
+            });
+
+            $('#btnSelect').on('click', function () {
+                //$('#txtVoornaam').select();
+                $('#divResult').html('Trigger: tekst geselecteerd via de knop');
+                // of:
+                $('#txtVoornaam').trigger('select')
+            });
+        });
+    </script>
+</head>
+
+<body>
+<input type="text" id="txtVoornaam" placeholder="Uw voornaam"/>
+<button id="btnSelect">Selecteer alle tekst</button>
+<div id="divResult"></div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <title>document.queryselectorAll()</title>
+    <script>
+        // Voer script uit zodra de pagina helemaal geladen is.
+        window.addEventListener('load', () => {
+            // 1. Alle radiobuttons ophalen.
+            const kleuren = document.querySelectorAll('input[type=radio]');
+
+            // 2. In een lus een event handler toevoegen
+            for (let i in kleuren) {
+                kleuren[i].addEventListener('click', () => {
+                    document.getElementById('divResult').innerHTML =
+                        'Gekozen kleur: ' + kleuren[i].value;
+                })
+            }
+        })
+    </script>
+</head>
+
+<body>
+<h2>document.queryselectorAll()</h2>
+<input type="radio" name="radioGroup" value="rood" checked/>Rood<br/>
+<input type="radio" name="radioGroup" value="blauw"/>Blauw<br/>
+<input type="radio" name="radioGroup" value="geel"/>Geel<br/>
+<input type="radio" name="radioGroup" value="groen"/>Groen<br/>
+<div id="divResult"></div>
+</body>
+</html>

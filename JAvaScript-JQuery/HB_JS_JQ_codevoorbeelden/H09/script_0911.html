@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery CSS- en HTML-functies</title>
+	<!-- CSS -->
+	<style>
+	body{
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:24px;
+	}
+	.blauw{
+		color: #06F;
+	}
+	</style>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+	$(document).ready(function() {
+
+		const divResult = $('#divResult'); // caching in variabele.
+
+		// .wrap() en .wrapInner()
+		divResult.wrap('<div id="divOuter" />');
+		divResult.wrapInner('<strong />')
+
+	}); // einde document.ready
+	</script>
+</head>
+
+<body>
+	<div id="divResult">Dit is de inhoud</div>
+</body>
+</html>

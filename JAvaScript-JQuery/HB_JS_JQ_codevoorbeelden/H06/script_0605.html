@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <title>Waarde uit tekstvak halen</title>
+    <script>
+        // globale variabele
+        let naam = '';
+
+        // Voer script uit zodra de pagina helemaal geladen is.
+        window.addEventListener('load', function () {
+            // caching van HTML-elementen in variabelen
+            const divResult = document.getElementById('divResult');
+
+            // event handler voor de knop
+            document.getElementById('btnKnop1').addEventListener('click', function () {
+                naam = document.getElementById('txtNaam').value;
+                divResult.innerHTML = '<h2>Welkom ' + naam + '</h2>';
+            });
+        }) // einde load
+
+    </script>
+</head>
+
+<body>
+<h2>Inhoud van tekstvak opvragen</h2>
+<input type="text" id="txtNaam" placeholder="uw naam..."/>
+<button id="btnKnop1">Toon boodschap</button>
+<div id="divResult"></div>
+</body>
+</html>

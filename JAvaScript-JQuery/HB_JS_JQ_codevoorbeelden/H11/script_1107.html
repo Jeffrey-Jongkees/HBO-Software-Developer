@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<style>
+		body {
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 24px;
+		}
+
+		div {
+			width: 300px;
+			height: 50px;
+			border: 1px solid #999;
+			background-color: #fcc;
+			border-radius: 4px;
+			margin: 4px;
+		}
+
+		#divResult {
+			background-color: #ffc;
+			width: 200px;
+			height: 30px;
+		}
+	</style>
+	<title>jQuery live events met .on()</title>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		let teller = 0;
+		$(document).ready(function () {
+			// Klikken op de li afvangen en verwerken
+			// met gebruik van context-selector in .on() werkt dit OOK voor nieuw ingevoegde li's
+			$('#mijnLijst').on('click', 'li', function () {
+				alert('Op een listitem geklikt: ' + $(this).text());
+			});
+
+			// Nieuw listitem toevoegen aan DOM.
+			$('#btnKnop1').on('click', function () {
+				const numItem = $('#mijnLijst li').length + 1;
+				$('#mijnLijst').append('<li>item ' + numItem + '</li>');
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+	<ul id="mijnLijst">
+		<li>item 1</li>
+		<li>item 2</li>
+		<li>item 3</li>
+	</ul>
+	<button id="btnKnop1">list Item toevoegen</button>
+</body>
+</html>
+
+

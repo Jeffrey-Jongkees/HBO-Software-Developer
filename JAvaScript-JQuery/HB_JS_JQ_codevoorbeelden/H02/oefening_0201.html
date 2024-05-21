@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>parseInt en parseFloat</title>
+</head>
+
+<body>
+	<h1>De JavaScript-telmachine</h1>
+	<div id="divResult"></div>
+
+	<script>
+		// Lees twee getallen in, converteer ze met parseInt() en parseFloat()
+		const getal1 = prompt('Vul het eerste getal in', 'getal 1');
+		const getal2 = prompt('Vul het tweede getal in', 'getal 2');
+		// var totaal = getal1 + getal2; // <== dit gaat fout.
+		const totaal = parseInt(getal1) + parseInt(getal2);
+		const tekst = getal1 + ' plus ' + getal2 + ' = ' + totaal;
+
+		// totaalwaarde in het document plaatsen.
+		document.getElementById('divResult').innerHTML = tekst;
+
+alert("Dit is de eerste regel\nDit is de tweede regel\nEn dit is de derde regel ");
+
+	</script>
+</body>
+</html>

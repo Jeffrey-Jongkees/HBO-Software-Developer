@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery CSS- en HTML-functies</title>
+	<!-- CSS -->
+	<style>
+	body{
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:24px;
+	}
+	.blauw{
+		color: #06F;
+	}
+	#divResult{
+		width:200px;
+		height:150px;
+		border: 2px solid red;
+	}
+	</style>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		// .empty() en .remove()
+		$('#btnEmpty').on('click', function () {
+			$('#divResult').empty();
+		});
+
+		$('#btnRemove').on('click', function () {
+			$('#divResult').remove();
+		});
+
+	}); // einde document.ready
+	</script>
+</head>
+
+<body>
+	<div id="divResult">Dit is de inhoud</div>
+	<button id="btnEmpty">Leegmaken (empty)</button>
+	<button id="btnRemove">Verwijderen (remove)</button>
+</body>
+</html>

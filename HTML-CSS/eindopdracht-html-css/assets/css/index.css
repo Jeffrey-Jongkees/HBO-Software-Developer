@@ -1,0 +1,87 @@
+html,
+body {
+  background-color: whitesmoke;
+}
+
+.home-content {
+  background-color: whitesmoke;
+  display: inline-grid;
+  width: 100%;
+  height: fit-content;
+  grid-template-columns: [col-1] auto [col-2] auto [col-3] auto [col-4] auto [col-5] auto [col-6] auto [col-7] auto [col-8] auto [col-9] auto [col-10] auto [end];
+  grid-template-rows: [row-1] auto [row-2] auto [row-3] auto [row-4] auto [row-5] auto [row-6];
+  margin: 0%;
+  padding: 0%;
+}
+
+.home-delerium {
+  grid-column-start: col-3;
+  grid-column-end: col-4;
+  grid-row-start: row-1;
+  grid-row-end: row-2;
+  align-self: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.home-vakantie {
+  grid-column-start: col-6;
+  grid-column-end: col-9;
+  grid-row-start: row-1;
+  grid-row-end: row-2;
+  align-self: center;
+  justify-content: center;
+  align-self: center;
+  margin: 0%;
+  padding: 0%;
+}
+
+.filmpjes-flexbox {
+  grid-column-start: col-2;
+  grid-column-end: col-10;
+  grid-row-start: row-3;
+  grid-row-end: row-4;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5%;
+  justify-content: center;
+  align-self: center;
+  margin: 0%;
+  padding: 0%;
+}
+
+.plaatjes-flexbox {
+  grid-column-start: col-2;
+  grid-column-end: col-10;
+  grid-row-start: row-5;
+  grid-row-end: row-6;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5%;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  margin: 0%;
+  padding: 0%;
+}
+
+.plaatjes-caption {
+  text-align: center;
+  align-self: center;
+  max-width: 30vh;
+}
+
+.achtergrondkleur-plaatjes {
+  background-color: white;
+  border-width: 5vh;
+  border-color: white;
+  border-style: solid;
+
+}
+
+.dans-image {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}

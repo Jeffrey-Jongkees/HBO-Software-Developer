@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery CSS- en HTML-functies</title>
+	<!-- CSS -->
+	<style>
+		body {
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 24px;
+		}
+
+		.blauw {
+			color: #06F;
+		}
+	</style>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#btnKnop1').on('click', function () {
+				// haal ingevulde waarden op...
+				const username = $('#txtUsername').val();
+				const password = $('#txtPassword').val();
+
+				///...en toon ze in de UI
+				$('#divResult').html('Gebruikersnaam: ' + username
+					+ ', wachtwoord: ' + password);
+			});
+		}); // einde document.ready
+	</script>
+</head>
+
+<body>
+	Gebruikersnaam:	<input type="text" id="txtUsername" /><br />
+	Wachtwoord:	<input type="password" id="txtPassword" /><br />
+	<button id="btnKnop1">Check!</button>
+	<div id="divResult"></div>
+</body>
+</html>

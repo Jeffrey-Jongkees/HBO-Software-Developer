@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery CSS- en HTML-functies</title>
+	<!-- CSS -->
+	<style>
+		body {
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 24px;
+		}
+
+		.blauw {
+			color: #06F;
+		}
+	</style>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// �nhoud van de koptekst opvragen en in variabele tekst plaatsen
+			let tekst = $('h1').html();
+			// kopieren naar de div via .html('...)
+			$('#divResult').html('kopie: ' + tekst);
+
+			// de functie .text()
+			tekst = $('h1').html();
+			$('#divResult').text('text: ' + tekst);
+
+			// Titel van de pagina instellen
+			$('title').text('De functie .text()');
+
+		}); // einde document.ready
+	</script>
+</head>
+
+<body>
+	<h1>Dit is <span class="blauw">een blauwe</span> koptekst</h1>
+	<div id="divResult"></div>
+</body>
+</html>

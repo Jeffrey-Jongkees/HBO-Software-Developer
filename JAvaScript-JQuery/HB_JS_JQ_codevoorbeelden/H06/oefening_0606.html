@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Oefening 6.6</title>
+    <script>
+        window.addEventListener('load', function () {
+            // 1. variabelen instellen
+            const foto = document.getElementById('foto1');
+            const newSource = 'puppy_01.jpg';	// nieuwe foto
+            let originalSource = ''; // hier slaan we straks de originele foto in op - daarom 'let'
+
+            // 2. MouseOver instellen
+            foto.addEventListener('mouseover', function () {
+                // plaats de bestandsnaam in de globale variabele
+                originalSource = foto.attributes['src'].value;
+                foto.attributes['src'].value = newSource;
+                document.getElementById('divResult').innerHTML = 'Afbeelding: ' + newSource;
+            });
+
+            // 3. Mouseout instellen - originele afbeelding herstellen
+            foto.addEventListener('mouseout', function () {
+                // Originele afbeelding herstellen
+                foto.attributes['src'].value = originalSource;
+                document.getElementById('divResult').innerHTML = 'Afbeelding: ' + originalSource;
+            }, false);
+        });	// einde load
+    </script>
+</head>
+
+<body>
+<h2>Mouseover de afbeelding</h2>
+<img src="kitten_01.jpg" alt="foto" id="foto1" width="300"/><br/>
+<div id="divResult"></div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Complexe objecten</title>
+</head>
+
+<body>
+	<h1>Complexe objecten</h1>
+	<p>Kijk in de DevTools console (F12) voor uitvoer.</p>
+	<div id="divResult"></div>
+
+	<script>
+		// retourneert de prijs van het gevraagde boek.
+		function getBookPrice(isbn) {
+			// isbn als parameter wordt hier nu niet daadwerkelijk gebruikt.
+			return 'EUR 34,99';
+		}
+
+		// 1. Complex object
+		const boek = {
+			// eigenschappen met stringwaarden.
+			titel: 'Handboek JavaScript en jQuery',
+			ISBN: '9789463562652',
+			// eigenschappen met numerieke waarden.
+			druk: 4,
+			jaar: 2022,
+			// eigenschap met objectwaarde
+			auteur: {
+				voornaam: 'Peter',
+				achternaam: 'Kassenaar'
+			},
+			// eigenschap met waarde uit functieresultaat
+			prijs: getBookPrice('9789463562652'),
+
+			// eigenschap met inline functie als resultaat.
+			volledige_naam: function () {
+				const volledige_naam = this.auteur.voornaam + ' ' + this.auteur.achternaam;
+				return volledige_naam;
+			}
+		};
+
+
+		// 2. Waarden van objecten ophalen:
+		const titel = boek["titel"]; // Handboek JavaScript en jQuery
+		const uitgave = boek.jaar;	// 2022
+
+		console.log(boek.volledige_naam());
+		console.log('Prijs: ' + boek.prijs);
+		console.log(boek["prijs"]);	// EUR 34,99
+
+		// 3. Niet bestaande eigenschappen krijgen undefined:
+		console.log(boek.omschrijving);	// undefined
+
+		// 4. Nu kan het wel:
+		boek["omschrijving"] = "Leer alles over JavaScript en jQuery";
+		console.log(boek.omschrijving);
+
+	</script>
+</body>
+</html>

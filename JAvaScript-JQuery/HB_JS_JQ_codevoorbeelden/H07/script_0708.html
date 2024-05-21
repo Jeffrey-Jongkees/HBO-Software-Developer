@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <title>document.appendChild()</title>
+    <script>
+        // tellertje voor nieuwe <div>'s.
+        let index = 1;
+
+        // Voer script uit zodra de pagina helemaal geladen is.
+        window.addEventListener('load', () => {
+            document.getElementById('btnKnop1').addEventListener('click', () => {
+                // 1. maak nieuw element.
+                const newElement = document.createElement('div');
+                newElement.id = 'div' + index++;
+
+                // 2. maak nieuwe textnode op basis van tekst in het tekstveld.
+                const node = document.getElementById('txtElement').value;
+                const newNode = document.createTextNode(node);
+
+                // 3. Voeg de tekst toe aan het nieuwe element.
+                newElement.appendChild(newNode);
+
+                // 4. Log en toon in pagina.
+                console.log(newElement);
+                document.getElementById('divResult').appendChild(newElement);
+            })
+        })
+    </script>
+</head>
+
+<body>
+<h2>document.appendChild()</h2>
+<p>Tekst toevoegen: </p>
+<input type="text" id="txtElement"/>
+<button id="btnKnop1">Maak</button>
+<p>(Gebruik de Developer Tools om het resultaat te zien)</p>
+<div id="divResult"></div>
+</body>
+</html>

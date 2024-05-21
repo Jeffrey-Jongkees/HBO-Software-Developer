@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <style>
+        #divResult {
+            border: 1px solid #999;
+            background-color: #ffc;
+            padding: 4px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <title>jQuery ajax : $.ajax()</title>
+    <!-- jQuery insluiten -->
+    <script src="../script/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Pagina ophalen.
+            // Als het goed gaat wordt de opgehaalde data getoond in de UI, als
+            // het fout gaat, wordt een foutmelding getoond. Probeer zelf een
+            // niet-bestaande pagina op te halen om de foutmelding te testen.
+            $('#btnLoad').on('click', function () {
+                const urlPagina = 'h12_load123.html';
+                $.ajax({
+                    url: urlPagina,
+                    success: data => {
+                        $('#divResult').html(data);
+                    },
+                    error: () => {
+                        $('#divResult').html('FOUT: Er is iets fout gegaan!');
+                    }
+                });
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+<h2>De jQuery .ajax()-functie</h2>
+<button id="btnLoad">Haal pagina</button>
+<div id="divResult">Hier komt de pagina</div>
+</body>
+</html>
+
+

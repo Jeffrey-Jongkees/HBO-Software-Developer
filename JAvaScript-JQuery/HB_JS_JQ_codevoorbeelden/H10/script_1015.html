@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery tabs</title>
+	<style>
+		body {
+			font-family: Helvetica, Arial, sans-serif;
+		}
+
+		#tabs li {
+			display: inline;
+		}
+
+		#tabs a {
+			display: inline-block;
+			padding: 4px;
+			text-decoration: none;
+		}
+
+			.selected, #tabs a:hover {
+				background-color: #309;
+				color: #fff;
+			}
+
+		.tab {
+			display: block;
+			width: 450px;
+			height: 150px;
+			border: 1px solid #309;
+			padding: 10px;
+			margin: 4px 10px;
+		}
+	</style>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// 1. Verberg alle tabs behalve de eerste
+			/*$('#content div:not(:first)').hide();
+
+			// 2. Aanhaken van klik op de tab-hyperlink
+			$('#tabs a').on('click', function (e) {
+				// 2a. Voorkom standaardgedrag klik op hyperlink.
+				e.preventDefault();
+
+				// 2b. Verberg inhoud van alle tabs.
+				$('#content div').hide();
+
+				// 2c. Verwijder klasse .selected van de tabs.
+				$('#tabs a.selected').removeClass('selected');
+
+				// 2d. Voeg klasse .selected toe aan huidige tab.
+				$(this).addClass('selected');
+
+				// 2e. Toon aangeklikte tab.
+				var selectie = $(this).attr('href');
+				$(selectie).show();
+			});
+			*/
+		});
+	</script>
+</head>
+
+<body>
+	<ul id="tabs">
+		<li><a href="#info" class="selected">Informatie</a></li>
+		<li><a href="#over">Over ons</a></li>
+		<li><a href="#contact">Contact</a></li>
+	</ul>
+	<div id="content">
+		<div id="info" class="tab">
+			Informatie over de diensten, producten, enzovoort....
+		</div>
+		<div id="over" class="tab">
+			Achtergrondinformatie over bedrijf, de mensen, enzovoort....
+		</div>
+		<div id="contact" class="tab">
+			contactgegevens...
+		</div>
+	</div>
+</body>
+</html>
+
+

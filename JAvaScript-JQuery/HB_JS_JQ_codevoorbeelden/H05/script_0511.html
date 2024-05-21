@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Array.forEach()</title>
+</head>
+
+<body>
+	<h1>Array.forEach()</h1>
+	<p>Kijk in de DevTools console (F12) voor uitvoer.</p>
+	<div id="divResult"></div>
+
+	<script>
+		// Standaard array
+		const mijnArray = ['rood', 'geel', 'blauw', 'zwart', 'wit' ];
+		console.log('Originele array: ', mijnArray);
+
+		// Aangepaste array. Hij wordt gevuld via een .forEach() op de oorspronkelijke array
+		const mijnArrayHoofdletters = [];
+		mijnArray.forEach(function (kleur, index) {
+			 mijnArrayHoofdletters[index] = kleur.toUpperCase();
+		});
+		console.log('Aangepaste array: ', mijnArrayHoofdletters);// ["ROOD", "GEEL", "BLAUW", "ZWART", "WIT" ]
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <title>querySelectorAll()</title>
+    <style>
+        .geel {
+            background-color: yellow;
+        }
+
+    </style>
+    <script>
+        // Voer script uit zodra de pagina helemaal geladen is.
+        window.addEventListener('load', () => {
+            // selecteer alle elementen met de klasse 'geel' via querySelectorAll()
+            document.getElementById('btnKnop1').addEventListener('click', () => {
+                const geel = document.querySelectorAll('.geel');
+                for (let i = 0; i < geel.length; i++) {
+                    document.getElementById('divResult').innerHTML +=
+                        geel[i].innerHTML + '<br />';
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+<h2>document.querySelectorAll()</h2>
+<p>De eerste paragraaf</p>
+<p class="geel">De tweede paragraaf</p>
+<p>De derde paragraaf</p>
+<p class="geel">De vierde paragraaf</p>
+<button id="btnKnop1">Selecteer</button>
+<div id="divResult"></div>
+</body>
+</html>

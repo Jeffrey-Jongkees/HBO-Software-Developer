@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<style>
+		#divResult {
+			border: 1px solid #999;
+			background-color: #ffc;
+			padding: 4px;
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+	<title>jQuery animation: animate</title>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// custom functie .animate()
+			const animationOptions = {
+				'width': '400px',
+				'font-size': '40px',
+				'height': '540px'
+			};
+			$('#btnAnimate').on('click', () => {
+				$('#divResult').animate(animationOptions, 1500);
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="divResult">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis cum dolore dolores dolorum ipsam quae quos sed velit, voluptatum. Amet culpa enim eveniet, facilis illum laboriosam laudantium modi repellendus!</div>
+	<button id="btnAnimate">Animate</button>
+</body>
+</html>
+
+

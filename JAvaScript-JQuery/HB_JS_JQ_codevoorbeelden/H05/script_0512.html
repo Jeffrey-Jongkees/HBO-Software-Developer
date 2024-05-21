@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>Array.map()</title>
+</head>
+
+<body>
+<h1>Array.map()</h1>
+<p>Kijk in de DevTools console (F12) voor uitvoer.</p>
+<div id="divResult"></div>
+
+<script>
+    // Standaard array
+    const mijnArray = ['rood', 'geel', 'blauw', 'zwart', 'wit'];
+    console.log('Originele array: ', mijnArray);
+
+    // .map() ontvangt elke waarde uit de array en voert er een bewerking op uit.
+    // (hier: omzetten naar hoofdletters).
+    const mijnArrayHoofdletters = mijnArray.map(function (kleur) {
+        return kleur.toUpperCase();
+    });
+    console.log('Gemapte array: ', mijnArrayHoofdletters);// ["ROOD", "GEEL", "BLAUW", "ZWART", "WIT" ]
+
+
+    // De functie kan korter worden geschreven als arrow-functie:
+    const mijnArrayHoofdletters2 = mijnArray.map(kleur => kleur.toUpperCase());
+</script>
+</body>
+</html>

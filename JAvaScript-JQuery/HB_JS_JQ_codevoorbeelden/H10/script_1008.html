@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <style>
+        #divResult {
+            border: 1px solid #999;
+            background-color: #ffc;
+            padding: 4px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <title>jQuery animation - callbacks</title>
+    <!-- jQuery insluiten -->
+    <script src="../script/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Callbackfunctie na fadeToggle
+            // FOUT:
+            // $('#btnFadeToggle').on('click', () => {
+            // 	// 1. animatie uitvoeren.
+            // 	const divResult = $('#divResult'); // caching
+            //
+            // 	divResult.fadeToggle(3000);
+            //
+            // 	// 2. na animatie tekst op de knop aanpassen.
+            // 	if ($(divResult).is(':visible')) {
+            // 		$('#btnFadeToggle').text('Uitfaden');
+            // 	} else {
+            // 		$('#btnFadeToggle').text('Infaden');
+            // 	}
+            // });
+
+            //GOED:
+            $('#btnFadeToggle').on('click', () => {
+                $(divResult).fadeToggle(3000, () => {
+                    if ($(divResult).is(':visible')) {
+                        $('#btnFadeToggle').text('Uitfaden');
+                    } else {
+                        $('#btnFadeToggle').text('Infaden');
+                    }
+                });
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+<div id="divResult">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut beatae commodi dicta dolor,
+    dolorum eius impedit, ipsum natus nihil nobis nostrum perferendis repellat sapiente sit veritatis voluptates. Eius,
+    quo!
+</div>
+<button id="btnFadeToggle">Div faden</button>
+
+
+</body>
+</html>
+
+

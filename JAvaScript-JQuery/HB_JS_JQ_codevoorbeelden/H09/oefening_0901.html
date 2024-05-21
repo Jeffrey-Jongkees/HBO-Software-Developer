@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery CSS- en HTML-functies</title>
+	<!-- CSS -->
+	<style>
+		body {
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 24px;
+		}
+
+		.blauw {
+			color: #06F;
+		}
+
+		#divResult {
+			width: 200px;
+			height: 150px;
+			border: 2px solid #D3D3D3;
+			margin: 10px 0;
+		}
+
+		#txtColor {
+			width: 200px;
+		}
+	</style>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+
+			$('#btnSetColor').on('click', function () {
+
+				// 1. Haal kleurwaarde op
+				const color = $('#txtColor').val();
+
+				// 2. Check welke radiobutton is geselecteerd.
+				if ($('#rdBackground').is(':checked')) {
+					// 2a. achtergrond.
+					$('#divResult').css('background-color', color);
+				} else {
+					// 2b. voorgrond.
+					$('#divResult').css('color', color);
+				}
+			});
+
+		}); // einde document.ready
+	</script>
+</head>
+
+<body>
+	<input type="radio" id="rdForeground" name="type" checked />Voorgrond
+
+	<input type="radio" id="rdBackground" name="type" />Achtergrond<br />
+	<input type="text" id="txtColor" placeholder="kleurwaarde (#RRGGBB)" />
+	<button id="btnSetColor">Stel kleur in</button><br />
+	<div id="divResult">Voorbeeld tekst</div>
+
+</body>
+</html>

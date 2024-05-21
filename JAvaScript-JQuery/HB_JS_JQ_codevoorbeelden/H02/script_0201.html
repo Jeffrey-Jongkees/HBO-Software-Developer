@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>parseInt en parseFloat</title>
+</head>
+
+<body>
+	<h1>De JavaScript-telmachine</h1>
+	<div id="divResult"></div>
+
+	<script>
+		// Lees twee getallen in, converteer ze met parseInt() en parseFloat()
+		const getal1 = prompt('Vul het eerste getal in', 'getal 1');
+		const getal2 = prompt('Vul het tweede getal in', 'getal 2');
+		// const totaal = getal1 + getal2; // <== dit gaat fout.
+		const totaal = parseInt(getal1) + parseInt(getal2); // <== Dit is correct. Strings omzetten naar gehele getallen met parseInt()
+		// const totaal = +getal1 + +getal2; // <== Moderne syntaxis, het plusteken gebruiken. Oudere browsers (< 2015) begrijpen dit niet.
+		const tekst = getal1 + ' plus ' + getal2 + ' = ' + totaal;
+
+		// totaalwaarde in het document plaatsen.
+		document.getElementById('divResult').innerHTML = tekst;
+
+	</script>
+</body>
+</html>

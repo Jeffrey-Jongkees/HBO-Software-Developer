@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<style>
+		#divResult {
+			border: 1px solid #999;
+			background-color: #ffc;
+			padding: 4px;
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+	<title>jQuery animation: animate</title>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// custom functie .animate() met callback
+			const animationOptions = {
+				'width': '400px',
+				'font-size': '40px'
+			};
+			$('#btnAnimate').on('click', () => {
+				$('#divResult').animate(animationOptions, 1500, () => {
+					$('#divResult').text('Animatie gereed.');
+				});
+			});
+		});
+
+	</script>
+</head>
+
+<body>
+	<div id="divResult">Tekst in de div</div>
+	<button id="btnAnimate">Animate</button>
+</body>
+</html>
+
+

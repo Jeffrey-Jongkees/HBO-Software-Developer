@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Het if-statement</title>
+</head>
+
+<body>
+	<h1>Het if-statement</h1>
+	<div id="divResult"></div>
+
+	<script>
+		// 1. Testen uitvoeren via het if-statement
+		const spaargeld = 2500;	// wijzig deze waarde voor verschillende resultaten!
+		let laptop;
+
+		if (spaargeld >= 2000) {
+			laptop = true;
+			document.getElementById('divResult').innerHTML = 'Die nieuwe laptop komt er aan!';
+		}
+		else {
+			laptop = false;
+			document.getElementById('divResult').innerHTML = 'Nog even verder sparen...';
+		}
+
+		// 2. Uitgebreid testen met meerdere else-statements
+		if (spaargeld >= 2000) {
+			laptop = true;
+			document.getElementById('divResult').innerHTML = 'Die nieuwe laptop komt er aan!';
+		}
+		else if(spaargeld >= 1750) {
+			laptop = false;
+			document.getElementById('divResult').innerHTML = 'Je bent er bijna!';
+		} else {
+			laptop = false;
+			document.getElementById('divResult').innerHTML = 'Die laptop zit er voorlopig nog niet in...';
+		}
+	</script>
+</body>
+</html>

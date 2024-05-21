@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Pop-up pagina</title>
+</head>
+
+<body>
+
+    <div id="divResult"></div>
+
+    <script >
+        window.alert("Pagina geladen");
+        
+        let naam = prompt('Wat is uw naam?', 'Naam');
+        
+        
+        if(confirm(`Uw naam is ${naam}, is dit correct?`)) {
+            txt = ` Welkom ${naam}, een fijne dag gewenst!`
+        } else {
+            naam = prompt('Wat is uw naam?', 'Naam');
+        }
+        
+        
+        window.document.write(txt);
+    
+    </script>
+
+</body>
+</html>

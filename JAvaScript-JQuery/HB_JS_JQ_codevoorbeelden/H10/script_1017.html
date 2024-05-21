@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <title>jQuery tooltips - verfijnd</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            border: 2px solid #777;
+            border-radius: 4px;
+            padding: 2px 6px;
+            background-color: #FFFF99;
+            color: #333;
+        }
+    </style>
+    <!-- jQuery insluiten -->
+    <script src="../script/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function (e) {
+            $('#tabs a').hover(
+                function () {
+                    // 1. hover in
+                    const titel = $(this).attr('title');
+                    const positie = {
+                        'top': (e.pageY - 10) + 'px',
+                        'left': (e.pageX + 15) + 'px'
+                    };
+
+                    // 1a. Title-tekst tijdelijk opslaan in data-attribuut
+                    // om te voorkomen dat standaard tooltip in browser wordt getoond.
+                    $(this)
+                        .data('tooltipText', titel)
+                        .removeAttr('title');
+
+                    // 1b. tooltip aan DOM toevoegen
+                    $('<div class="tooltip"></div>')
+                        .text(titel)
+                        .appendTo('body')
+                        .css(positie)
+                        .fadeIn();
+                },
+                function () {
+                    // 2. hover out
+                    // Titel-attribuut herstellen.
+                    const titel = $(this).data('tooltipText');
+                    $(this).attr('title', titel);
+                    $('.tooltip').remove();
+                }).on('mousemove', function (e) {
+
+                // 3. muis volgen
+                const positie = {
+                    'top': (e.pageY - 10) + 'px',
+                    'left': (e.pageX + 15) + 'px'
+                };
+                $('.tooltip').css(positie);
+            });
+        });
+    </script>
+</head>
+
+<body>
+<ul id="tabs">
+    <li><a href="#" title="Informatie over onze diensten en producten">Informatie</a></li>
+    <li><a href="#" title="Achtergronden bij het bedrijf, de mensen, en meer">Over ons</a></li>
+    <li><a href="#" title="Adresgegevens en een routebeschrijving">Contact</a></li>
+</ul>
+</body>
+</html>
+
+

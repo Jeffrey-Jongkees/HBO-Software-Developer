@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <title>removeChild()</title>
+    <script>
+        // Voer script uit zodra de pagina helemaal geladen is.
+        window.addEventListener('load', () => {
+            document.getElementById('btnKnop1').addEventListener('click', () => {
+                // 1. zoek laatste alinea
+                const divResult = document.getElementById('divResult');
+                const alinea = divResult.querySelector('p:last-child'); // Selecteer laatste element
+                console.log(alinea + ' wordt verwijderd...');
+
+                // 2. Verwijder de alinea
+                divResult.removeChild(alinea);
+                console.log('verwijderd!');
+            })
+        })
+    </script>
+</head>
+
+<body>
+<h2>.removeChild()</h2>
+<p>Verwijder de alinea's van beneden naar boven</p>
+<button id="btnKnop1">Verwijder</button>
+<div id="divResult">
+    <p>Alinea 1</p>
+    <p>Alinea 2</p>
+    <p>Alinea 3</p>
+    <p>Alinea 4</p>
+    <p>Alinea 5</p>
+    <p>Alinea 6</p>
+</div>
+</body>
+</html>

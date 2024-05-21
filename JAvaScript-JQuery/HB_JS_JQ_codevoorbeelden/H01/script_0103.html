@@ -1,0 +1,23 @@
+﻿<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Een inline event handler</title>
+</head>
+
+<body>
+	<!-- Een inline event handler (GEEN best practice) -->
+	<button id="btnPrompt" onclick="toonPrompt();">Voer promotiecode in</button>
+	<div id="divResult"></div>
+
+	<script>
+
+		// functie
+		function toonPrompt() {
+			const code = prompt('Vul uw promotiecode in', 'uw code');
+			const tekst = 'De code die u invoerde was: ' + code;
+			document.getElementById('divResult').innerHTML = tekst;
+		}
+	</script>
+</body>
+</html>

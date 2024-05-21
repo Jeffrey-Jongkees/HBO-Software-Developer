@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Het statement break;</title>
+</head>
+
+<body>
+	<h1>Het statement break;</h1>
+	<div id="divResult"></div>
+
+	<script>
+		const target = 17;	// wijzig eventueel deze waarde
+		let n = 0;
+
+		// (opzettelijke) oneindige lus
+		while (true) {
+			n++;
+			if (n === target) {
+				break; // spring uit de lus
+			}
+		}
+
+		document.getElementById('divResult').innerHTML =
+			'n heeft het doel bereikt: ' + n + '<br />';
+
+	</script>
+</body>
+</html>

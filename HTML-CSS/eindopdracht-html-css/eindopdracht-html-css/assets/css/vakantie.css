@@ -1,0 +1,59 @@
+
+.vakantie-content {
+  display: inline-grid;
+  width: 100%;
+  height: 200vh;
+  grid-template-columns: [col-1] auto [col-2] auto [col-3] auto [col-4] auto [col-5] auto [col-6] auto [col-7] auto [col-8] auto [col-9] auto [col-10] auto [end];
+  grid-template-rows: [row-1] auto [row-2] auto [row-3] auto [row-4] auto [row-5] auto [row-6] auto [row-7] auto [row-8];
+}
+
+.vakantie-titel {
+  padding-left: 8.5%;
+}
+
+.vakantie-image-main-content {
+  grid-column-start: col-2;
+  grid-column-end: end;
+  grid-row-start: row-1;
+  grid-row-end: row-4;
+  margin: 0%;
+  padding: 0%;
+}
+
+.vakantie-image-main {
+  width: auto;
+  height: 100vh;
+}
+
+.vakantie-tekst {
+  grid-column-start: col-2;
+  grid-column-end: end;
+  grid-row-start: row-5;
+  grid-row-end: row-6;
+  margin: 0%;
+  padding: 0%;
+}
+
+.vakantie-images {
+  grid-column-start: col-1;
+  grid-column-end: end;
+  grid-row-start: row-7;
+  grid-row-end: row-8;
+  margin: 0%;
+  padding: 0%;
+  padding-top: 0.5%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.vakantie-image {
+  width: auto;
+  height: 80vh;
+  padding-left: 2.5%;
+}
+
+.link-hotel {
+  text-decoration: underline !important;
+  color: #0e98c2 !important;
+}

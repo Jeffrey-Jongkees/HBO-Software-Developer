@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <title>jQuery events</title>
+    <style>
+        img {
+            width: 300px;
+        }
+
+        #divTooltip {
+            display: none;
+            width: 300px;
+			padding: 4px;
+            border: 2px solid #999;
+            background-color: #FFFFCC;
+            color: #333;
+            border-radius: 4px;
+			box-sizing: border-box;
+        }
+    </style>
+    <!-- jQuery insluiten -->
+    <script src="../script/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Tooltip tonen bij hover
+            $('img').hover(
+                // functie handlerIn
+                function () {
+                    $('#divTooltip').css('display', 'block');
+                },
+                // functie handlerOut
+                function () {
+                    $('#divTooltip').css('display', 'none');
+                }
+            );// einde .hover()
+        });
+
+    </script>
+</head>
+
+<body>
+<img src="../img/kitten1.jpg" alt="pluisje"/>
+<div id="divTooltip">Dit is onze nieuwe poes Pluisje</div>
+</body>
+</html>

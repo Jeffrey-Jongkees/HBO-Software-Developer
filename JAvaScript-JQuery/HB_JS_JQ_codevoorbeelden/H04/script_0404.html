@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>De lus while()</title>
+</head>
+
+<body>
+	<h1>De lus while()</h1>
+	<div id="divResult"></div>
+
+	<script>
+		let teller = 1; // we kunnen hier geen const gebruiken, omdat de waarde van teller wordt aangepast.
+		const getal = 10;
+
+		while (teller <= 10) {
+			document.getElementById('divResult').innerHTML += teller + ' maal ' + getal + ' = ' + teller * getal + '<br />';
+			teller++;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery CSS- en HTML-functies</title>
+	<!-- CSS -->
+	<style>
+		body {
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 24px;
+		}
+
+		img {
+			display: block;
+			width: 300px;
+		}
+	</style>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+
+			// Toon url van huidige afbeelding in divResult
+			let url = $('#imgKitten').attr('src');
+			$('#divResult').text('bron : '+ url);
+
+			// Zelfde resultaat:
+			//$('#divResult').text('bron : ' + $('#imgKitten').attr('src'));
+
+
+			// tellertje
+			let i = 1;
+
+			// Event handler voor de knop
+			$('#knop1').on('click', function () {
+				// 1. teller ophogen
+				i++;
+
+				// 2. afbeelding aanpassen
+				$('#imgKitten').attr('src', '../img/kitten' + i + '.jpg');
+
+				// 3. reset i indien nodig.
+				if (i > 2) {
+					i = 0;
+				}
+
+				// 4. Url in het document tonen
+				$('#divResult').text('bron : ' + $('#imgKitten').attr('src'));
+			});
+		}); // einde document.ready
+	</script>
+</head>
+
+<body>
+	<img src="../img/kitten1.jpg" id="imgKitten" alt="afbeelding kitten" />
+	<div id="divResult"></div>
+	<button id="knop1">Wissel afbeelding</button>
+
+</body>
+</html>

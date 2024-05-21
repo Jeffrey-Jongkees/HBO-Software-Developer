@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>Toetsenbord-events</title>
+	<script>
+		// globale variabele
+		let keyCode = '';
+
+		// Voer script uit zodra de pagina helemaal geladen is.
+		window.onload = function () {
+			// caching van HTML-elementen in variabelen
+			const divResult = document.getElementById('divResult');
+
+			// event handler voor tekstvak
+			document.getElementById('txtKey').onkeyup = function (e) {
+				keyCode = e.keyCode;
+				divResult.innerHTML = 'KeyCode: ' + keyCode;
+
+				// Enter ingedrukt?
+				if (keyCode === 13) {
+					divResult.innerHTML += ' (Enter-toets)';
+					// ga hier bijvoorbeeld formulier verzenden.
+					// Voor nu: tekst uit het vak wordt naar de pagina gekopieerd.
+					const currentText = this.value; // this, omdat de waarde uit het huidige tekstvak wordt gelezen.
+					document.getElementById('divResult2').innerHTML = currentText;
+				}
+			};
+		} // einde window.onload
+
+	</script>
+</head>
+
+<body>
+	<h2>Toetsenbordevents afvangen</h2>
+	<input type="text" id="txtKey" placeholder="Druk op een toets..." />
+	<div id="divResult"></div>
+	<div id="divResult2"></div>
+</body>
+</html>

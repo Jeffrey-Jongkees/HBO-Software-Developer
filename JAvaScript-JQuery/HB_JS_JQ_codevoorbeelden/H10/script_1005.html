@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<style>
+		#divResult {
+			border: 1px solid #999;
+			background-color: #ffc;
+			padding: 4px;
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+	<title>jQuery animations: fadeIn en fadeOut</title>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// divResult tonen en verbergen na klik op knop
+			$('#btnFadeIn').on('click', function () {
+				$('#divResult').fadeIn(800);
+			});
+
+			$('#btnFadeOut').on('click', function () {
+				$('#divResult').fadeOut(800);
+			});
+
+		});
+
+	</script>
+</head>
+
+<body>
+	<div id="divResult">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis distinctio illo nihil quasi qui! At harum non qui? Autem cupiditate et, nihil nulla provident quasi qui. Id quam sequi voluptatum!</div>
+	<button id="btnFadeIn">Infaden</button>
+	<button id="btnFadeOut">Uitfaden</button>
+
+</body>
+</html>
+
+

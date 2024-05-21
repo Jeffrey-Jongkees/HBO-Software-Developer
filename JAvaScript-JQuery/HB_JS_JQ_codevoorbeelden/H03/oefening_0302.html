@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Getallen vergelijken</title>
+</head>
+
+<body>
+	<h2>Getallen vergelijken</h2>
+	<div id="divGetallen"></div>
+	<hr />
+	<div id="divResult"></div>
+
+	<script>
+		// Lees twee getallen in, converteer ze met parseInt() en parseFloat()
+		const getal1 = parseInt(prompt('Vul het eerste getal in', 'getal 1'));
+		const getal2 = parseInt(prompt('Vul het tweede getal in', 'getal 2'));
+
+		// Invoer op het scherm tonen.
+		const getallen = 'De getallen die u invoerde waren ' + getal1 + ' en ' + getal2;
+		document.getElementById('divGetallen').innerHTML = getallen;
+
+		// De vergelijkingen uitvoeren.
+		const groterKleiner = (getal1 > getal2) ? 'groter ' : 'kleiner ';
+		const resultaat = getal1 + ' is ' + groterKleiner + ' dan ' + getal2;
+
+		//resultaat += '<br />Is het eerste getal gelijk aan het tweede getal? ' + (getal1 == getal2);
+		document.getElementById('divResult').innerHTML = resultaat;
+	</script>
+</body>
+</html>

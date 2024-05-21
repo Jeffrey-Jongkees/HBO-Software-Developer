@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery CSS- en HTML-functies</title>
+	<!-- CSS -->
+	<style>
+		body {
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 24px;
+		}
+
+		.blauw {
+			color: #06F;
+		}
+
+		#divResult {
+			width: 200px;
+			height: 150px;
+			border: 2px solid #D3D3D3;
+			margin: 10px 0;
+		}
+
+		#txtColor {
+			width: 200px;
+		}
+	</style>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+
+			// Boodschappenlijstje
+			$('#btnItemToevoegen').on('click', function () {
+				const itemOmToeTeVoegen = $('#txtNameItem').val();
+				const verwijderLink = '<a href="#" class="removeMe">verwijder</a>'
+				$('#mijnBoodschappenlijst').prepend('<li>' + itemOmToeTeVoegen + ' ' + verwijderLink + '</li>');
+
+			});
+
+			// Verwijder het item uit de lijst
+			$('#mijnBoodschappenlijst').on('click', '.removeMe', function () {
+				$(this).parent('li').remove();
+
+			});
+
+			// Input-veld leegmaken bij focus
+			$('#txtNameItem').on('click', function () {
+				$(this).val('');
+			});
+
+		});
+
+</script>
+</head>
+
+<body>
+	<!-- Inhoud van de pagina -->
+	<div id="content">
+		<h2>Boodschappenlijst</h2>
+		Welk item toevoegen??
+			<input id="txtNameItem" placeholder="welk item?" />
+		<button id="btnItemToevoegen">Toevoegen</button>
+		<ul id="mijnBoodschappenlijst"></ul>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <style>
+        #divResult {
+            border: 1px solid #999;
+            background-color: #ffc;
+            padding: 4px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <title>jQuery animation: easing</title>
+</head>
+
+<body>
+<!-- HTML -->
+<button id="btnLinear">Linear</button>
+<button id="btnSwing">Swing</button>
+<button id="btnReset">Reset</button>
+<div id="divResult">Animatie: Linear en Swing</div>
+
+<!-- JavaScript  -->
+<script src="../script/jquery-3.6.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // .animate() met de standaard easing-functies.
+        const animationOptions = {
+            'height': '600px',
+        };
+        const $result = $('#divResult'); // caching van jQuery-object in variabele
+
+        // Lineaire animatie
+        $('#btnLinear').on('click', () => {
+            $result.animate(animationOptions, 600, 'linear');
+        });
+
+        // Swing animatie
+        $('#btnSwing').on('click', () => {
+            $result.animate(animationOptions, 600, 'swing');
+        });
+
+        // Reset
+        $('#btnReset').on('click', () => {
+            $result.removeAttr('style'); // reset
+        });
+    });
+</script>
+
+</body>
+</html>
+
+

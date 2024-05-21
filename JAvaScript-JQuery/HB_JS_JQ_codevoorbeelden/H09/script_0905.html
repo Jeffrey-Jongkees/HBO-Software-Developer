@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>jQuery CSS- en HTML-functies</title>
+	<!-- CSS -->
+	<style>
+	body{
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:24px;
+	}
+	p{
+		cursor: pointer;
+	}
+	.blauw{
+		background-color:#09F;
+		color: #fff;
+		border: 1px solid #000;
+	}
+	.groot{
+		font-size: 48px;
+	}
+	</style>
+	<!-- jQuery insluiten -->
+	<script src="../script/jquery-3.6.1.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		// CSS-klasse toevoegen met .addClass()
+		$('p').addClass('blauw');
+
+		// CSS-klasse verwijderen met .removeClass()
+		$('p:odd').removeClass('blauw');
+
+		// testen op CSS-klasse met .hasClass()
+		$('p').on('click', function(){
+			if($(this).hasClass('blauw')){
+				alert('Deze paragraaf is blauw');
+			}else {
+					alert('Deze paragraaf is NIET blauw');
+			}
+		});
+	}); // einde document.ready
+	</script>
+</head>
+
+<body>
+	<p>Dit is de eerste paragraaf</p>
+	<p>Dit is de tweede paragraaf</p>
+	<p>Dit is de derde paragraaf</p>
+	<p>Dit is de vierde paragraaf</p>
+	<p>Dit is de vijfde paragraaf</p>
+	<p>Dit is de zesde paragraaf</p>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Comments gebruiken:
+- single line gebruik //
+- multiple lines /* ... */
+
+object includes:
+
+- arrays
+- functions
+- object literals (gewoon objecten {})

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<title>Parameters doorgeven</title>
+</head>
+
+<body>
+	<h1>Parameters doorgeven</h1>
+	<div id="divResult"></div>
+
+	<script>
+		// 1. Variabele declareren
+		const mijnNaam = 'Peter';
+
+		// 2. Functie declareren, de variabele 'naam' is de parameter/het argument.
+		function printNaam(naam) {
+			document.getElementById('divResult').innerHTML =
+				'<h2>Uw naam is: ' + naam + '</h2>';
+		}
+
+		// 3. Functie aanroepen. We geven 'mijNaam' mee als parameter.
+		// Binnen de functie is hij bekend als 'naam' (zie ook de functiedefinitie hierboven).
+		printNaam(mijnNaam);
+
+	</script>
+</body>
+</html>

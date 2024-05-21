@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+	<title>mouse events</title>
+	<style>
+	 #divBox{
+		 height:150px;
+		 width:350px;
+		 border:2px solid black;
+	 }
+	 #divCoords{
+		 height:30px;
+		 width:350px;
+		 border:2px solid black;
+		 margin-top: 4px;
+	 }
+	</style>
+
+	<script>
+		// Voer script uit zodra de pagina helemaal geladen is.
+		window.addEventListener('load', function () {
+			// caching van HTML-elementen in variabelen
+			const divResult = document.getElementById('divResult');
+			const box = document.getElementById('divBox');
+			const coords = document.getElementById('divCoords');
+
+			// functie om mouseover af te vangen
+			box.onmouseover = function () {
+				divResult.innerHTML += 'De muis is nu in de Box <br />';
+			};
+
+			// functie om mouseout af te vangen
+			box.onmouseout = function () {
+				divResult.innerHTML += 'Tot ziens! De muis heeft de Box verlaten <br />';
+			};
+
+			// functie om mousemove (binnen de box) af te vangen.
+			// de coordinaten worden meegegeven in het event-object als parameter.
+			box.onmousemove = function (e) {
+				coords.innerHTML = 'Coordinaten: X : ' + e.clientX + ', Y: ' + e.clientY;
+			};
+		}) // einde onLoad
+
+	</script>
+</head>
+
+<body>
+	<h2>mouseenter en mouseleave</h2>
+	<div id="divBox"></div>
+	<div id="divCoords"></div>
+	<div id="divResult"></div>
+</body>
+</html>

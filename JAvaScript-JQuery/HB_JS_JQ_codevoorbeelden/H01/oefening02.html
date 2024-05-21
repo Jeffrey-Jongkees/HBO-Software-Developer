@@ -1,0 +1,23 @@
+﻿<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>Browserversie</title>
+</head>
+
+<body>
+<button id="btnVersie" onclick="toonVersie();">Toon browserversie</button>
+<div id="divResult"></div>
+
+<script>
+// functie
+function toonVersie(){
+    const browser = navigator.appName;
+    const versie = navigator.appVersion;
+    const tekst = 'U gebruikt ' + browser + ', versie : ' + versie;
+
+    document.getElementById('divResult').innerHTML = tekst;
+}
+</script>
+</body>
+</html>
