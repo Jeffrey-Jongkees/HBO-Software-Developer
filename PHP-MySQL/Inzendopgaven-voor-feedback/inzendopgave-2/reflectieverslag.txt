@@ -1,0 +1,8 @@
+Formule BMI berekenen voedingscentrum.nl
+lichaamsgewicht / (gewicht x gewicht) = 
+
+1. Eerst de BMI Formule opgezocht
+2. De formule uitgewerkt/geschreven om de BMI te berekenen door middel van een for-loop
+3. De HTML en PHP code geschreven om de formule erin te verwerken
+
+Fouten && gebruikt ipv || daardoor werden het aantal gewichten 60 - 70 - 80 - 90 niet weergegeven
