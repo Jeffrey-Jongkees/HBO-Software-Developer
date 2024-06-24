@@ -1,8 +1,36 @@
-Formule BMI berekenen voedingscentrum.nl
-lichaamsgewicht / (gewicht x gewicht) = 
+BMI BEREKENEN
 
-1. Eerst de BMI Formule opgezocht
-2. De formule uitgewerkt/geschreven om de BMI te berekenen door middel van een for-loop
-3. De HTML en PHP code geschreven om de formule erin te verwerken
+Inleiding
 
-Fouten && gebruikt ipv || daardoor werden het aantal gewichten 60 - 70 - 80 - 90 niet weergegeven
+De opdracht was om een BMI-calculator te maken aan de hand van HTML en PHP.
+
+
+De opdracht is verdeeld in vier delen:
+1. Het opzoeken van de BMI-formule.
+2. De formule verwerken in een functie() om de juiste BMI-waarde uit te rekenen.
+3. Een for-loop schrijven om de juiste BMI-waarde voor het betreffende gewicht weer te geven.
+4. De HTML- en PHP-code schrijven om via de server het script uit te voeren en in de browser weer te geven.
+
+
+OPZOEKEN BMI-FORMULE
+De formule die vermeld staat op de webpagina van voedingscentrum.nl is gebruikt voor het berekenen van de BMI.
+
+
+FUNCTIE UITREKENEN BMI-WAARDES
+De functie is zo geschreven dat deze de BMI-waarde retourneert door de volgende formule te gebruiken: (lichaamsgewicht / (lengte x lengte) = BMI).
+
+
+FOR-LOOP
+Tijdens het schrijven en uitvoeren van de for-loop kwam er een fout naar boven: niet alle gewichten met hun BMI-waarden werden weergegeven. 
+De oorzaak hiervan was een fout in de if-else statements. 
+Bij het vergelijken van de uitkomst van de BMI-waarde tussen twee BMI-grenswaardes, was er eerst gebruikgemaakt van de logische &&-operator. 
+Deze is vervangen door de logische ||-operator. Hierdoor worden alle gewichten in kilogrammen en hun bijbehorende BMI-waarden correct weergegeven.
+
+
+HTML EN PHP
+Om ervoor te zorgen dat PHP correct is toegepast, is de hulpbron w3schools.com geraadpleegd voor inspiratie.
+
+
+CSS
+Voor de grijze horizontale streep op de calculatorpagina is gebruikgemaakt van CSS. 
+Aangezien dit het enige CSS-opmaak is van deze pagina, is besloten om deze in de <head>-sectie toe te voegen in plaats van een aparte file aan te maken en dan te importeren.

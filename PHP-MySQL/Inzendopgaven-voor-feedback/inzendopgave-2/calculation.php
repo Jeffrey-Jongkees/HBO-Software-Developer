@@ -10,7 +10,7 @@
             margin-bottom: 10px;
             width: 90%;
         }
-    </style>
+        </style>
     </head>
     <body>
 
@@ -28,18 +28,24 @@
         }
 
         for($gewicht = 40; $gewicht <= 150; $gewicht += 10) {
+            
             $bmi = bmi_berekenen($gewicht, $_POST["lengte"]);
+            $tekst ="Bij een gewicht van $gewicht kg is de BMI " . round($bmi, 2);
+            
             if($bmi < 18.5) {
-                echo "Bij een gewicht van $gewicht kg is de BMI " . round($bmi, 2) . ", ondergewicht<br>";
+                echo $tekst . ", ondergewicht<br>";
             }
             elseif($bmi === 18.5 || $bmi < 25) {
-                echo "Bij een gewicht van $gewicht kg is de BMI " . round($bmi, 2) . ", goed gewicht<br>";
+                echo $tekst . ", goed gewicht<br>";
            }
            elseif($bmi === 25 || $bmi < 30) {
-                echo "Bij een gewicht van $gewicht kg is de BMI " . round($bmi, 2) . ", overgewicht<br>";  
+                echo $tekst . ", matig overgewicht<br>";  
             }
-            elseif($bmi >= 30) {
-                echo "Bij een gewicht van $gewicht kg is de BMI " . round($bmi, 2) . ", ernstig overgewicht<br>";  
+            elseif($bmi === 30 || $bmi < 40) {
+                echo $tekst . ", ernstig overgewicht<br>";  
+            }
+            elseif($bmi >= 40) {
+                echo $tekst . ", gevaarlijk overgewicht<br>";  
             }
         }
         ?>
