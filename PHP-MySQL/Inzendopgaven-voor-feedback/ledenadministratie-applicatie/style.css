@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+header {
+    background-color: black;
+    color: white;
+    padding: 8px
+}
+
+span {
+    margin: 10px;
+}
+
+a:link{
+    color: white;
+    text-decoration: none;
+    
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+    
+    
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+    
+}
+
+.login-button {
+    background-color: rgb(42, 143, 237);
+    color: white;
+    width: 160px; 
+    text-align: center; 
+}
+
+.admin-button {
+    background-color: black;
+    color: white;
+    width: 160px; 
+    text-align: center; 
+}
+
+th, td {
+    border-style: ridge;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: black;
+    border-color:antiquewhite;
+    color: white;
+  }
+
+  table {
+    border-spacing: 0;
+  }
+
+  .empty-space {
+    border: none;
+    height: 10px;
+    background-color: white;
+    border-color:white;
+}
+
+.td {
+    border-style: none;
+    border-collapse: none;
+    text-align: left;
+    background-color:white;
+    border-color:antiquewhite;
+    color: black;
+    padding-left: 5px;
+
+    a:link {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: black;
+        text-decoration: underline;
+    }
+
+    a:visited {
+        color: black;
+        text-decoration: none;
+        
+    }
+
+
+}
+
+.toevoegen {
+        
+    a:link {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: blue !important;
+        text-decoration: underline;
+    }
+
+    a:visited {
+        color: black;
+        text-decoration: none;
+        
+    }
+}
