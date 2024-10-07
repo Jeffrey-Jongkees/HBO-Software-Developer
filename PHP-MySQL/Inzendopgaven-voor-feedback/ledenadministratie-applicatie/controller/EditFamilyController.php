@@ -1,6 +1,7 @@
 <?php
 require_once 'model/sport.php';
 require_once 'SessionController.php';
+require_once 'BetalingsController.php';
 
 
 class EditFamilyController  extends SessionController{

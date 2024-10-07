@@ -1,0 +1,248 @@
+header {
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.vending-machine {
+    background-color: #d3d3d3; 
+    border: solid black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.machine-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.slot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #7f7b7b;
+    border-radius: 10px;
+    text-align:center;
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+
+.temperatuur-regelaar {
+    background-color: #b3e5fc; 
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2em;
+    border: 2px solid #0e0000;
+}
+
+/* Specifieke vakafmetingen */
+.slot.appels {
+    width: 100px;
+    height: 100px;
+    background-image: url(./Assets/afbeeldingen/appelen.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120px 110px;
+}
+
+.slot.peren {
+    width: 100px;
+    height: 100px;
+    background-image: url(./Assets/afbeeldingen/peren.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 120px 110px;
+}
+
+.slot.melk {
+    width: 100px;
+    height: 150px;
+    background-image: url(./Assets/afbeeldingen/melk-in-fles.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120px 160px;
+}
+
+.slot.aardappelen {
+    width: 220px; 
+    height: 100px; 
+    background-image: url(./Assets/afbeeldingen/aardappelen.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 260px 110px;
+    padding-right: 25px;
+}
+
+.slot.eieren {
+    width: 100px;
+    height: 100px;
+    background-image: url(./Assets/afbeeldingen/mandje-eieren.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120px 109px;
+}
+
+.slot.empty {
+    background-image: url(./Assets/afbeeldingen/rood.webp);
+}
+
+.temperatuur-regelaar {
+    width: 150px;
+    height: 200px;
+}
+
+.temperatuur-regelaar input {
+    padding-left: 15px;
+    
+    width: 43px; 
+    height: 43px;
+    margin-bottom: 5px;
+    background-color: white;
+    
+}
+
+#temperatuur-melding {
+    display: none; 
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.body-home-view {
+    background-image: url(./Assets/afbeeldingen/groende-weide-met-een-bos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden; 
+}
+
+.body-landing-view {
+    background-image: url(./Assets/afbeeldingen/Boerderij.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    overflow-y: hidden;
+    height: 80vh; 
+}
+
+.body-login-view {
+    background-image: url(./Assets/afbeeldingen/schapen2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    overflow-y: hidden;
+    height: 80vh; 
+}
+
+/* Voor de link in normale staat */
+.body-landing-view a:link {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Voor bezochte links */
+.body-landing-view a:visited {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Voor wanneer de link wordt aangewezen (hover) */
+.body-landing-view a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Voor actieve links */
+.body-landing-view a:active {
+    color: white;
+    text-decoration:underline;
+}
+
+.uitloggen a:link{
+    color: white;
+    text-decoration: none;
+}
+
+.uitloggen a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.uitloggen a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.uitloggen a:active{
+    color: white;
+    
+}
+
+.uitloggen-overzicht a:link{
+    color: black;
+    text-decoration: none;
+}
+
+.uitloggen-overzicht a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.uitloggen-overzicht a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+.uitloggen-overzicht a:active{
+    color: black;
+    
+}
+
+.table-voorraad {
+    text-align: center;
+}
+
+.table-inkomen-product {
+    text-align: left;
+}
+
+form {
+    align-items: center;
+
+}
